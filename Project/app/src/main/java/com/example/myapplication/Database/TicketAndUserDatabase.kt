@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Database
 
 import android.content.Context
 import androidx.room.Database
@@ -14,7 +14,7 @@ abstract class TicketAndUserDatabase : RoomDatabase() { //XD: Room automatically
         @Volatile
         private var INSTANCE: TicketAndUserDatabase? = null
 
-        fun getInstance(context: Context) : TicketAndUserDatabase{
+        fun getInstance(context: Context) : TicketAndUserDatabase {
             synchronized(this){
                 var instance = INSTANCE
                 if(instance == null){

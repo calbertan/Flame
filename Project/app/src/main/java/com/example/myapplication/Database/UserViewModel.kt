@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Database
 
 import androidx.lifecycle.*
 import java.lang.IllegalArgumentException

@@ -165,22 +165,22 @@
                         >
 
                         <EditText
-                            android:id="@+id/Rectangle5"
+                            android:id="@+id/UserName_Field"
                             android:layout_width="231dp"
                             android:layout_height="51dp"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
                             android:background="@drawable/rectangle6_shape" />
 
-                        <TextView android:id="@+id/UserName"
-                            android:textSize="12sp"
-                            android:textColor="@color/donthaveaccount"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
+                        <TextView
+                            android:id="@+id/UserName"
                             android:layout_width="246dp"
                             android:layout_height="26dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
                             android:text="@string/name"
-                            />
+                            android:textColor="@color/donthaveaccount"
+                            android:textSize="12sp" />
 
                     </RelativeLayout>
 
@@ -192,12 +192,13 @@
                         android:layout_height="wrap_content"
                         >
 
-                        <EditText   android:id="@+id/Rectangle6"
-                            android:background="@drawable/rectangle7_shape"
+                        <EditText
+                            android:id="@+id/Email_Field"
+                            android:layout_width="231dp"
+                            android:layout_height="51dp"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
-                            android:layout_width="231dp"
-                            android:layout_height="51dp" />
+                            android:background="@drawable/rectangle7_shape" />
 
                         <TextView android:id="@+id/Email"
                             android:textSize="12sp"
@@ -219,12 +220,13 @@
                         android:layout_height="wrap_content"
                         >
 
-                        <EditText   android:id="@+id/Rectangle7"
-                            android:background="@drawable/rectangle8_shape"
+                        <EditText
+                            android:id="@+id/ConfirmEmail_Field"
+                            android:layout_width="231dp"
+                            android:layout_height="51dp"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
-                            android:layout_width="231dp"
-                            android:layout_height="51dp" />
+                            android:background="@drawable/rectangle8_shape" />
 
                         <TextView android:id="@+id/ConfirmEmail"
                             android:textSize="12sp"

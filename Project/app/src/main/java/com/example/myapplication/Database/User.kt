@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey
 data class User (
     // primary key userid, use this to identify each user
     @PrimaryKey(autoGenerate = true)
-    var user_id: Long = 0L,
+    var user_id: Long = 0,
 
     @ColumnInfo(name = "user_name_column")
     var name: String = "",
