@@ -9,11 +9,11 @@ import androidx.room.PrimaryKey
 // ticket table, save ticket information
 // add foreign key, so that when delete a user in User table, all associated tickets will be deleted
 @Entity(tableName = "ticket_table"
-//    ,foreignKeys = [ForeignKey(
-//        entity = User::class,
-//        parentColumns = ["user_id"],// with respect to primary key user_id in User
-//        childColumns = ["userId"],// with respect to foreign key userId in Ticket
-//        onDelete = CASCADE)]
+    ,foreignKeys = [ForeignKey(
+        entity = User::class,
+        parentColumns = ["user_id"],// with respect to primary key user_id in User
+        childColumns = ["userId"],// with respect to foreign key userId in Ticket
+        onDelete = CASCADE)]
 )
 data class Ticket (
     // primary key ticket_id, use this to identify each ticket
