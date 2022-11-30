@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:background="@color/gray"
+        android:id="@+id/frame_21"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/rectangle_14"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="rectangle_14"
+            android:src="@drawable/rectangle_14"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-1dp"
+            android:layout_width="334dp"
+            android:layout_height="108dp" />
+
+
+        <RelativeLayout
+            android:background="@color/gray"
+            android:id="@+id/frame_23"
+            android:layout_marginTop="112dp"
+            android:layout_marginStart="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members_"
+                android:layout_width="177dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="0dp"
+                android:textSize="10sp"
+                android:text="@string/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__string"
+                android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/___89_5"
+                android:layout_gravity="center_vertical|end"
+                android:gravity="end"
+                android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
+                android:layout_marginLeft="297dp"
+                android:layout_marginTop="1dp"
+                android:textSize="10sp"
+                android:layout_width="33dp"
+                android:layout_height="14dp"
+                android:text="@string/___89_5_string" />
+
+            <TextView
+                android:id="@+id/time_left_before_event_begin__1_months_09_days"
+                android:layout_gravity="center_vertical|end"
+                android:gravity="end"
+                android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
+                android:layout_marginLeft="181dp"
+                android:layout_marginTop="14dp"
+                android:textSize="10sp"
+                android:layout_width="149dp"
+                android:layout_height="27dp"
+                android:text="@string/time_left_before_event_begin__1_months_09_days_string" />
+
+            <TextView
+                android:id="@+id/bob_461"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="21dp"
+                android:textSize="10sp"
+                android:layout_width="52dp"
+                android:layout_height="17dp"
+                android:text="@string/bob_461_string" />
+
+            <ImageView
+                android:id="@+id/ellipse"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="ellipse"
+                android:src="@drawable/ellipse" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+<!--    end of image view 1-->
+
+</HorizontalScrollView>

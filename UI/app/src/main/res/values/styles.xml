@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="RoundView">
+        <attr name="radius" format="dimension"/>
+        <attr name="leftTopRadius" format="dimension"/>
+        <attr name="rightTopRadius" format="dimension"/>
+        <attr name="leftBottomRadius" format="dimension"/>
+        <attr name="rightBottomRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

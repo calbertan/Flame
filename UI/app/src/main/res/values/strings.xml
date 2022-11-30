@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="username">Your username</string>
+    <string name="sign">Sign In</string>
+    <string name="password">Your password</string>
+    <string name="add">This is the add fragment, you can add items you want to sell</string>
+    <string name="home">This is the home fragment, you can see items there</string>
+    <string name="setting">This the fragment to show tickets you bought</string>
+
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="profile_ek1_string">profile</string>
+    <string name="setting_ek1_string">Setting</string>
+    <string name="home_ek1_string">Home</string>
+    <string name="order_ek1_string">Order</string>
+
+    <string name="flame_string">Flame</string>
+    <string name="larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__string">Larana foods festival familiy tickets, perfect for 4 familiy members.</string>
+    <string name="___89_5_string">$ 89.5</string>
+    <string name="time_left_before_event_begin__1_months_09_days_string">Time left before Event begin:1 Months 09 Days</string>
+    <string name="bob_461_string">bob 461</string>
+    <string name="grunge_consert_vip_seat_45__very_close_to_the_stage__perfect_for_couples__string">Grunge Consert VIP seat 45, Very close to the stage. Perfect for couples. </string>
+    <string name="___100_string">$ 100</string>
+    <string name="time_left_before_event_begin__2_months_09_days_string">Time left before Event begin:2 Months 09 Days</string>
+    <string name="sara_123_string">sara 123</string>
+
+    <string name="Get_Started_string">Get Started</string>
+    <string name="No_Account">Dont have an account?  Sign Up</string>
+    <string name="burnning">Lets Burning !</string>
+    <string name="SignUp">Sign up</string>
+    <string name="alreadyhave">Already have an account?  Sign In</string>
+    <string name="name">User Name</string>
+    <string name="Email_string">Email</string>
+    <string name="ConfirmEmail">Confirm Email</string>
+    <string name="Password">Password</string>
+    <string name="confirmPassword">Comfirm Password</string>
+</resources>

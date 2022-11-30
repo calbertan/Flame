@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rectangle 4 from your XD file. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle" >
+	<corners android:radius="25dp" />
+	<solid android:color="@color/_bg__Loginpage_color" />
+</shape>
+

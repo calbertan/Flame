@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="#808080">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:contextClickable="true"
+            android:clickable="true"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:onClick= "hello"
+                android:contextClickable="true"
+                android:minHeight="20sp"
+                android:minWidth="20sp"
+                android:id="@+id/chooseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/choose"
+                android:layout_marginTop="25sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                tools:ignore="OnClick" />
+
+<!--            <ImageButton-->
+<!--                android:contextClickable="true"-->
+<!--                android:minHeight="30sp"-->
+<!--                android:minWidth="30sp"-->
+<!--                android:id="@+id/Mybutton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@mipmap/my"-->
+<!--                android:layout_marginTop="20sp"-->
+<!--                android:layout_marginStart="350dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:clickable="true" />-->
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab" />
+
+
+</RelativeLayout>
