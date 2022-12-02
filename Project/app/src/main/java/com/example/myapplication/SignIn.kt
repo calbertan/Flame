@@ -5,26 +5,26 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class SignUp: AppCompatActivity() {
-    private lateinit var burnning:TextView
+class SignIn: AppCompatActivity() {
+    private lateinit var welcome: TextView
     private lateinit var signIn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        setContentView(R.layout.signin)
         if (supportActionBar != null){
             supportActionBar?.hide();
         }
 
-        burnning = findViewById(R.id.burnning)
-        burnning.setOnClickListener() {
+        welcome = findViewById(R.id.welcome)
+        welcome.setOnClickListener() {
             val intent = Intent(this, Activity::class.java)
             startActivity(intent)
         }
 
-        signIn = findViewById(R.id.have_Account_Signin)
+        signIn = findViewById(R.id.no_Account_Signup)
         signIn.setOnClickListener() {
-            val intent = Intent(this, SignIn::class.java)
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
     }

@@ -24,13 +24,15 @@
     <string name="sara_123_string">sara 123</string>
 
     <string name="Get_Started_string">Get Started</string>
-    <string name="No_Account">Dont have an account?  Sign Up</string>
+    <string name="No_Account">Dont have an account?</string>
     <string name="burnning">Lets Burning !</string>
     <string name="SignUp">Sign up</string>
-    <string name="alreadyhave">Already have an account?  Sign In</string>
+    <string name="alreadyhave">Already have an account?</string>
     <string name="name">User Name</string>
     <string name="Email_string">Email</string>
     <string name="ConfirmEmail">Confirm Email</string>
     <string name="Password">Password</string>
     <string name="confirmPassword">Comfirm Password</string>
+    <string name="nameEmail">User Name or Email</string>
+    <string name="welcome">Welcome Back!</string>
 </resources>
