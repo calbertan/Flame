@@ -1,4 +1,4 @@
-package com.example.myapplication.Database
+package com.example.myapplication.Database.Entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 
 // user table, save user information, has foreign key that link to ticket table
 @Entity(tableName = "user_table")
-data class User (
+data class User(
     // primary key userid, use this to identify each user
-    @PrimaryKey(autoGenerate = true)
-    var user_id: Long = 0,
+    @PrimaryKey(autoGenerate = false)
+    var user_id: Long = 0L,
 
     @ColumnInfo(name = "user_name_column")
     var name: String = "",

@@ -1,4 +1,4 @@
-package com.example.myapplication.Database
+package com.example.myapplication.Database.Entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -8,16 +8,10 @@ import androidx.room.PrimaryKey
 
 // ticket table, save ticket information
 // add foreign key, so that when delete a user in User table, all associated tickets will be deleted
-@Entity(tableName = "ticket_table"
-    ,foreignKeys = [ForeignKey(
-        entity = User::class,
-        parentColumns = ["user_id"],// with respect to primary key user_id in User
-        childColumns = ["userId"],// with respect to foreign key userId in Ticket
-        onDelete = CASCADE)]
-)
+@Entity(tableName = "ticket_table")
 data class Ticket (
     // primary key ticket_id, use this to identify each ticket
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = false)
     var ticket_id: Long = 0L,
 
     // expire date
@@ -33,10 +27,10 @@ data class Ticket (
     @ColumnInfo(name = "ticket_description_column")
     var description: String = "",
 
-    // ticket status, false means not sold(also means belongs to seller), true means sold(also means belong to buyer)
-    // default false
+    // ticket status, 0 means not sold(also means belongs to seller), 1 means sold(also means belong to buyer)
+    // default 0
     @ColumnInfo(name = "ticket_status_column")
-    var status: Boolean = false,
+    var status: Int = 0,
 
     // foreign key
     @ColumnInfo(name = "userId")
@@ -47,7 +41,7 @@ data class Ticket (
     // for a ticket, the seller id is id of the ticket seller(as well as the one who
     // publish it), the buyer id is the id of the ticket buyer
     @ColumnInfo(name = "buyerId")
-    var buyerId: Long = 0L,
+    var buyerId: Long = -1L,
 
     // here sellerId is same as userId
     // for a ticket the owner of the ticket is the one who publish it and sell it
