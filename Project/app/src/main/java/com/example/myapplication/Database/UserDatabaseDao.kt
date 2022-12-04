@@ -66,6 +66,12 @@ interface UserDatabaseDao {
     @Query("SELECT user_id FROM user_table WHERE user_name_column = :nameEmail OR user_email_column = :nameEmail")
     suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long
 
+    @Query("SELECT user_id FROM user_table WHERE user_name_column = :name")
+    fun usernameExists(name: String): Long?
+
+    @Query("SELECT user_id FROM user_table WHERE user_email_column = :email")
+    fun emailExists(email: String): Long?
+
 
 // this part has move to the controller part, as these query can not be implement here
 

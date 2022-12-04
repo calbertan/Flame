@@ -3,12 +3,14 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.myapplication.Database.*
 import com.example.myapplication.Database.Entities.User
 import kotlinx.coroutines.launch
+import kotlin.concurrent.thread
 
 class SignUp: AppCompatActivity() {
     private lateinit var burnning:TextView
@@ -27,11 +29,14 @@ class SignUp: AppCompatActivity() {
 
         burnning = findViewById(R.id.burnning)
         burnning.setOnClickListener() {
-            val UserNameField:TextView = findViewById(R.id.UsernameField)
+            val UserNameField:TextView = findViewById(R.id.UserNameField)
             val username:String = UserNameField.text.toString()
 
             val EmailField:TextView = findViewById(R.id.EmailField)
             val email:String = EmailField.text.toString()
+
+            val PasswordField:TextView = findViewById(R.id.PasswordField)
+            val password:String = PasswordField.text.toString()
 
             databaseDao = UserDatabase.getInstance(this).userDatabaseDao
             repository = UserRepository(databaseDao)
@@ -39,25 +44,33 @@ class SignUp: AppCompatActivity() {
             viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
             var newUser = true
+            var newEmail = true
 
-            lifecycleScope.launch {
-                if(databaseDao.getUserIdByUserInputNameOrEmail(username) == null){
+            val t = Thread(Runnable{
+                if (databaseDao.usernameExists(username) != null)
                     newUser = false
-                    println("not new")
-                }
-            }
+                if (databaseDao.emailExists(email) != null)
+                    newEmail = false
 
-            if(newUser){
+            })
+            t.start()
+            t.join()
+
+            if(newUser && newEmail){
                 val randId = (0..100000).random().toLong()
-                val user: User = User(randId,username, "password", email)
+                val user: User = User(name= username, password = password, email=email)
+                println("debug: $user")
 
                 viewModel.insertUser(user)
 
                 val intent = Intent(this, Activity::class.java)
                 startActivity(intent)
             }
-            else{
-                println("debug: nothing")
+            else {
+                if(!newUser)
+                    Toast.makeText(applicationContext, "username is already in use", Toast.LENGTH_SHORT).show()
+                if(!newEmail)
+                    Toast.makeText(applicationContext, "email is already in use", Toast.LENGTH_SHORT).show()
             }
 
         }

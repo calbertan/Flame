@@ -1,247 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="wrap_content" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img">
+
     <ScrollView android:id="@+id/SignIn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" >
 
         <RelativeLayout android:id="@+id/content_container"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="650dp" >
 
-            <View   android:id="@+id/_bg__SignIn"
-                android:background="@drawable/signinshape"
+            <RelativeLayout
+                android:id="@+id/Frame4_ek1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="220dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/Vector"
+                    android:layout_width="213.17dp"
+                    android:layout_height="73.22dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:contentDescription="Vector"
+                    android:src="@drawable/loginback" />
+
+            </RelativeLayout>
+
+            <!--            <View   android:id="@+id/_bg__SignIn"-->
+            <!--                android:background="@drawable/signinshape"-->
+            <!--                android:layout_marginStart="0dp"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                android:layout_width="360dp"-->
+            <!--                android:layout_height="800dp" />-->
+
+
+            <!--            <RelativeLayout android:id="@+id/Content"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                android:layout_marginStart="0dp"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                >-->
+
+            <!--                <View-->
+            <!--                    android:id="@+id/BG"-->
+            <!--                    android:layout_width="360dp"-->
+            <!--                    android:layout_height="800dp"-->
+            <!--                    android:layout_marginStart="0dp"-->
+            <!--                    android:layout_marginTop="0dp"-->
+            <!--                    android:background="@drawable/bg_shape" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/Rectangle1"-->
+            <!--                    android:layout_width="360dp"-->
+            <!--                    android:layout_height="800dp"-->
+            <!--                    android:layout_marginStart="0dp"-->
+            <!--                    android:layout_marginTop="0dp"-->
+            <!--                    android:contentDescription="Rectangle 1"-->
+            <!--                    android:src="@drawable/rectangle1" />-->
+            <!--        <RelativeLayout-->
+            <!--            android:id="@+id/Frame3"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginStart="0dp"-->
+            <!--            android:layout_alignParentBottom="true">-->
+            <View
+                android:id="@+id/Rectangle4"
+                android:layout_width="match_parent"
+                android:layout_height="405dp"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_width="360dp"
-                android:layout_height="800dp" />
+                android:layout_marginTop="396dp"
+                android:background="@drawable/rectangle4_shape" />
 
 
-            <RelativeLayout android:id="@+id/Content"
-                android:layout_marginTop="0dp"
-                android:layout_marginStart="0dp"
+            <RelativeLayout android:id="@+id/Frame1"
+                android:layout_marginTop="717dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <View
+                    android:gravity="center"
+                    android:id="@+id/Rectangle8"
+                    android:layout_width="250dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/rectangle3_shape" />
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="184dp"
+                    android:layout_height="36.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="center"
+                    android:text="@string/welcome"
+                    android:textColor="@color/_bg__Loginpage_color"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/Frame4"
+                android:layout_marginTop="412dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+
+                <!--                    <RelativeLayout android:id="@+id/Frame2"-->
+                <!--                        android:layout_marginTop="1dp"-->
+                <!--                        android:layout_marginStart="2dp"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:gravity="center"-->
+                <!--                        >-->
+
+                <!--                    </RelativeLayout>-->
+
+                <TextView
+                    android:id="@+id/Signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="81.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginTop="-1dp"
+                    android:gravity="center"
+                    android:text="@string/sign"
+                    android:textColor="@color/Signup_color"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+
+            <!--                <RelativeLayout android:id="@+id/Frame4_ek1"-->
+            <!--                    android:layout_marginTop="220dp"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    >-->
+
+            <!--                    <ImageView-->
+            <!--                        android:id="@+id/Vector"-->
+            <!--                        android:layout_width="213.17dp"-->
+            <!--                        android:layout_height="73.22dp"-->
+            <!--                        android:layout_marginStart="0dp"-->
+            <!--                        android:layout_marginTop="0dp"-->
+            <!--                        android:contentDescription="Vector"-->
+            <!--                        android:src="@drawable/loginback" />-->
+
+            <!--                </RelativeLayout>-->
+
+
+            <RelativeLayout android:id="@+id/no_Account_Signin"
+                android:layout_marginTop="773dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/no_Account_Signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="23.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="@string/No_Account"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/UserInfo"
+                android:layout_marginTop="469dp"
+                android:layout_marginStart="68dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 >
 
-                <View
-                    android:id="@+id/BG"
-                    android:layout_width="360dp"
-                    android:layout_height="800dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/bg_shape" />
 
-                <ImageView
-                    android:id="@+id/Rectangle1"
-                    android:layout_width="360dp"
-                    android:layout_height="800dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:contentDescription="Rectangle 1"
-                    android:src="@drawable/rectangle1" />
-
-                <View   android:id="@+id/Rectangle4"
-                    android:background="@drawable/rectangle4_shape"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="396dp"
-                    android:layout_width="360dp"
-                    android:layout_height="405dp" />
-
-
-                <RelativeLayout android:id="@+id/Frame1"
-                    android:layout_marginTop="717dp"
-                    android:layout_marginStart="54dp"
+                <RelativeLayout android:id="@+id/Frame6"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="27dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     >
 
-                    <View   android:id="@+id/Rectangle3"
-                        android:background="@drawable/rectangle5_shape"
+                    <EditText
+                        android:id="@+id/UserNameEmailField"
+                        android:layout_width="231dp"
+                        android:layout_height="51dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/rectangle6_shape"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/UserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="250dp"
-                        android:layout_height="47dp" />
-
-                    <TextView
-                        android:id="@+id/welcome"
-                        android:layout_width="184dp"
-                        android:layout_height="36.5dp"
-                        android:layout_gravity="center_horizontal|center"
-                        android:layout_marginLeft="36dp"
-                        android:layout_marginTop="11dp"
-                        android:gravity="center"
-                        android:text="@string/welcome"
-                        android:textColor="@color/_bg__Loginpage_color"
-                        android:textSize="15sp" />
+                        android:text="@string/nameEmail"
+                        android:textColor="@color/donthaveaccount"
+                        android:textSize="12sp" />
 
                 </RelativeLayout>
 
 
-                <RelativeLayout android:id="@+id/Frame4"
-                    android:layout_marginTop="412dp"
-                    android:layout_marginStart="71dp"
+                <RelativeLayout android:id="@+id/Frame7"
+                    android:layout_marginTop="101dp"
+                    android:layout_marginStart="27dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     >
 
-
-                    <RelativeLayout android:id="@+id/Frame2"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginStart="2dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        >
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/Signup"
-                        android:layout_width="233dp"
-                        android:layout_height="81.5dp"
-                        android:layout_gravity="center_horizontal|center"
-                        android:layout_marginLeft="-4dp"
-                        android:layout_marginTop="-1dp"
-                        android:gravity="center"
-                        android:text="@string/sign"
-                        android:textColor="@color/Signup_color"
-                        android:textSize="25sp" />
-
-                </RelativeLayout>
-
-
-                <RelativeLayout android:id="@+id/Frame4_ek1"
-                    android:layout_marginTop="220dp"
-                    android:layout_marginStart="74dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <ImageView android:id="@+id/Vector"
-                        android:src="@drawable/loginback"
-                        android:contentDescription="Vector"
+                    <EditText
+                        android:id="@+id/PasswordField"
+                        android:layout_width="231dp"
+                        android:layout_height="51dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/rectangle7_shape" />
+
+                    <TextView android:id="@+id/Email"
+                        android:textSize="12sp"
+                        android:textColor="@color/donthaveaccount"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="213.17dp"
-                        android:layout_height="73.22dp" />
+                        android:layout_width="246dp"
+                        android:layout_height="26dp"
+                        android:text="@string/Password"
+                        />
 
                 </RelativeLayout>
 
 
-                <RelativeLayout android:id="@+id/no_Account_Signin"
-                    android:layout_marginTop="773dp"
-                    android:layout_marginStart="58dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    >
+                <!--                    <RelativeLayout android:id="@+id/Frame8"-->
+                <!--                        android:layout_marginTop="175dp"-->
+                <!--                        android:layout_marginStart="27dp"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        >-->
 
-                    <TextView
-                        android:id="@+id/no_Account_Signup"
-                        android:layout_width="257dp"
-                        android:layout_height="23.5dp"
-                        android:layout_gravity="center_horizontal|center"
-                        android:layout_marginLeft="-3dp"
-                        android:layout_marginTop="0dp"
-                        android:gravity="center"
-                        android:text="@string/No_Account"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15sp" />
-                </RelativeLayout>
+                <!--                        <EditText   android:id="@+id/Rectangle7"-->
+                <!--                            android:background="@drawable/rectangle8_shape"-->
+                <!--                            android:layout_marginStart="0dp"-->
+                <!--                            android:layout_marginTop="18dp"-->
+                <!--                            android:layout_width="231dp"-->
+                <!--                            android:layout_height="51dp" />-->
 
-
-                <RelativeLayout android:id="@+id/UserInfo"
-                    android:layout_marginTop="469dp"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    >
-
-
-                    <RelativeLayout android:id="@+id/Frame6"
-                        android:layout_marginTop="27dp"
-                        android:layout_marginStart="27dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        >
-
-                        <EditText
-                            android:id="@+id/Rectangle5"
-                            android:layout_width="231dp"
-                            android:layout_height="51dp"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="18dp"
-                            android:background="@drawable/rectangle6_shape" />
-
-                        <TextView
-                            android:id="@+id/UserName"
-                            android:layout_width="246dp"
-                            android:layout_height="26dp"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
-                            android:text="@string/nameEmail"
-                            android:textColor="@color/donthaveaccount"
-                            android:textSize="12sp" />
-
-                    </RelativeLayout>
-
-
-                    <RelativeLayout android:id="@+id/Frame7"
-                        android:layout_marginTop="101dp"
-                        android:layout_marginStart="27dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        >
-
-                        <EditText
-                            android:id="@+id/Rectangle6"
-                            android:layout_width="231dp"
-                            android:layout_height="51dp"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="18dp"
-                            android:background="@drawable/rectangle7_shape" />
-
-                        <TextView android:id="@+id/Email"
-                            android:textSize="12sp"
-                            android:textColor="@color/donthaveaccount"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_width="246dp"
-                            android:layout_height="26dp"
-                            android:text="@string/Password"
-                            />
-
-                    </RelativeLayout>
-
-
-                    <!--                    <RelativeLayout android:id="@+id/Frame8"-->
-                    <!--                        android:layout_marginTop="175dp"-->
-                    <!--                        android:layout_marginStart="27dp"-->
-                    <!--                        android:layout_width="wrap_content"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        >-->
-
-                    <!--                        <EditText   android:id="@+id/Rectangle7"-->
-                    <!--                            android:background="@drawable/rectangle8_shape"-->
-                    <!--                            android:layout_marginStart="0dp"-->
-                    <!--                            android:layout_marginTop="18dp"-->
-                    <!--                            android:layout_width="231dp"-->
-                    <!--                            android:layout_height="51dp" />-->
-
-                    <!--                        <TextView android:id="@+id/ConfirmEmail"-->
-                    <!--                            android:textSize="12sp"-->
-                    <!--                            android:textColor="@color/donthaveaccount"-->
-                    <!--                            android:layout_marginLeft="0dp"-->
-                    <!--                            android:layout_marginTop="0dp"-->
-                    <!--                            android:layout_width="246dp"-->
-                    <!--                            android:layout_height="26dp"-->
-                    <!--                            android:text="@string/ConfirmEmail"-->
-                    <!--                            />-->
-
-                </RelativeLayout>
+                <!--                        <TextView android:id="@+id/ConfirmEmail"-->
+                <!--                            android:textSize="12sp"-->
+                <!--                            android:textColor="@color/donthaveaccount"-->
+                <!--                            android:layout_marginLeft="0dp"-->
+                <!--                            android:layout_marginTop="0dp"-->
+                <!--                            android:layout_width="246dp"-->
+                <!--                            android:layout_height="26dp"-->
+                <!--                            android:text="@string/ConfirmEmail"-->
+                <!--                            />-->
 
             </RelativeLayout>
 
         </RelativeLayout>
 
+        <!--            </RelativeLayout>-->
+
     </ScrollView>
-</HorizontalScrollView>
+</RelativeLayout>

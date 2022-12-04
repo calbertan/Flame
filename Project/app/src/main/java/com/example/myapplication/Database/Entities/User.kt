@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "user_table")
 data class User(
     // primary key userid, use this to identify each user
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var user_id: Long = 0L,
 
     @ColumnInfo(name = "user_name_column")

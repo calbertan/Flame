@@ -30,7 +30,6 @@
     <string name="alreadyhave">Already have an account?</string>
     <string name="name">User Name</string>
     <string name="Email_string">Email</string>
-    <string name="ConfirmEmail">Confirm Email</string>
     <string name="Password">Password</string>
     <string name="confirmPassword">Comfirm Password</string>
     <string name="nameEmail">User Name or Email</string>
