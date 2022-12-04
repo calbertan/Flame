@@ -1,57 +1,27 @@
-package com.example.myapplication.Controller
-
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.ForeignKey.CASCADE
-import androidx.room.PrimaryKey
-
-//// ticket table, save ticket information
-//// add foreign key, so that when delete a user in User table, all associated tickets will be deleted
-//@Entity(tableName = "ticket_table",
-//    foreignKeys = [ForeignKey(
-//    entity = User::class,
-//    parentColumns = ["user_id"],// with respect to primary key user_id in User
-//    childColumns = ["userId"],// with respect to foreign key userId in Ticket
-//    onDelete = CASCADE)]
-//)
-@Entity(tableName = "ticket_table")
-data class Ticket (
-    // primary key ticket_id, use this to identify each ticket
-    @PrimaryKey(autoGenerate = false)
-    var ticket_id: Long = 0L,
-
-    // expire date
-    @ColumnInfo(name = "ticket_time_column")
-    var time: String = "",
-
-    @ColumnInfo(name = "ticket_location_column")
-    var location: String = "",
-
-    @ColumnInfo(name = "ticket_price_column")
-    var price: String = "",
-
-    @ColumnInfo(name = "ticket_description_column")
-    var description: String = "",
-
-    // ticket status, 0 means not sold(also means belongs to seller), 1 means sold(also means belong to buyer)
-    // default 0
-    @ColumnInfo(name = "ticket_status_column")
-    var status: Int = 0,
-
-    // foreign key
-    @ColumnInfo(name = "userId")
-    var userId: Long = 0L,
-
-    // buyerId and sellerId
-
-    // for a ticket, the seller id is id of the ticket seller(as well as the one who
-    // publish it), the buyer id is the id of the ticket buyer
-    @ColumnInfo(name = "buyerId")
-    var buyerId: Long = -1L,
-
-    // here sellerId is same as userId
-    // for a ticket the owner of the ticket is the one who publish it and sell it
-    @ColumnInfo(name = "sellerId")
-    var sellerId: Long = userId,
-)
+//package com.example.myapplication.Controller
+//
+//import com.example.myapplication.Database.*
+//
+//class MainController {
+//    //val dao = UserDatabase.getInstance(getApplicationContext()).userDatabaseDao
+//
+//
+//    fun signUp(name:String , email:String){
+//        val newUser= User(
+//            name = name,
+//            password = email,
+//            email = "",
+//        )
+//        println("debug: id=".plus(newUser.user_id))
+//        println("debug: name=".plus(newUser.name))
+//
+//        //insert to database, might need to combine databasedao and repository
+////            database = TicketAndUserDatabase.getInstance(this)
+////            databaseDao = database.userDatabaseDao
+////            repository = UserRepository(databaseDao)
+////
+////            factory = UserRepository(repository)
+////            viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
+////            viewModel.insert(newUser)
+//    }
+//}

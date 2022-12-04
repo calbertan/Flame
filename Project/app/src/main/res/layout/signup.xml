@@ -164,7 +164,7 @@
                         >
 
                         <EditText
-                            android:id="@+id/Rectangle5"
+                            android:id="@+id/UsernameField"
                             android:layout_width="231dp"
                             android:layout_height="51dp"
                             android:layout_marginStart="0dp"
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         >
 
-                        <EditText   android:id="@+id/Rectangle6"
+                        <EditText   android:id="@+id/EmailField"
                             android:background="@drawable/rectangle7_shape"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
@@ -218,12 +218,12 @@
                         android:layout_height="wrap_content"
                         >
 
-                        <EditText   android:id="@+id/Rectangle7"
-                            android:background="@drawable/rectangle8_shape"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="18dp"
+                        <EditText
+                            android:id="@+id/ConfirmEmailField"
                             android:layout_width="231dp"
-                            android:layout_height="51dp" />
+                            android:layout_height="51dp"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/rectangle8_shape" />
 
                         <TextView android:id="@+id/ConfirmEmail"
                             android:textSize="12sp"

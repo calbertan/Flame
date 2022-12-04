@@ -4,6 +4,7 @@ import androidx.room.*
 import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.Entities.User
 import com.example.myapplication.Database.Entities.Relations.UserWithTickets
+import kotlinx.coroutines.flow.Flow
 
 //XD: At compile time, Room automatically generates implementations of the custom DAO interface that you define.
 // Click the middle mouse button (Windows users) to see the code generated automatically by the system.
@@ -34,6 +35,9 @@ interface UserDatabaseDao {
 
     @Query("SELECT * FROM ticket_table")
     suspend fun getAllTickets(): List<Ticket>
+
+    @Query("SELECT * FROM ticket_table")
+    fun getAllFlowTickets(): Flow<List<Ticket>>
 
     @Query("SELECT * FROM ticket_table WHERE ticket_id = :key")
     suspend fun getTicketById(key: Long): Ticket
