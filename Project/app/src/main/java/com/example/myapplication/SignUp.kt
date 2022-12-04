@@ -38,17 +38,27 @@ class SignUp: AppCompatActivity() {
             factory = UserViewModelFactory(repository)
             viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
-            //viewModel.getUserIdByUserInputNameOrEmail(username);
+            var newUser = true
 
-            val randId = (0..100000).random().toLong()
-            val user: User = User(randId,username, "password", email)
+            lifecycleScope.launch {
+                if(databaseDao.getUserIdByUserInputNameOrEmail(username) == null){
+                    newUser = false
+                    println("not new")
+                }
+            }
 
+            if(newUser){
+                val randId = (0..100000).random().toLong()
+                val user: User = User(randId,username, "password", email)
 
+                viewModel.insertUser(user)
 
-            viewModel.insertUser(user)
-
-            val intent = Intent(this, Activity::class.java)
-            startActivity(intent)
+                val intent = Intent(this, Activity::class.java)
+                startActivity(intent)
+            }
+            else{
+                println("debug: nothing")
+            }
 
         }
 
