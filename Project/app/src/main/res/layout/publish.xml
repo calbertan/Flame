@@ -140,7 +140,7 @@
 				android:layout_height="54dp"
 				android:layout_marginLeft="13dp"
 				android:layout_marginTop="342dp"
-				android:text="@string/special_notice_title_string"
+				android:text="@string/location_title_string"
 				android:textColor="@color/delivery_method_title_color"
 				android:textSize="20sp"
 				android:textStyle="bold" />
@@ -153,13 +153,13 @@
 <!--				android:background="@drawable/special_notice_textbox_shape" />-->
 
 			<EditText
-				android:id="@+id/special_notice_description"
+				android:id="@+id/location_description"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_horizontal|center"
 				android:layout_marginStart="12dp"
 				android:layout_marginTop="373dp"
-				android:hint="@string/special_notice_description_string"
+				android:hint="@string/location_description_string"
 				android:textColor="@color/delivery_method_description_color" />
 
 <!--			<View-->

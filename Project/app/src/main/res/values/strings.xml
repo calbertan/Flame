@@ -41,14 +41,14 @@
     <string name="Purchased_string">Purchased</string>
 
     <string name="delivery_method_title_string">Delivery method</string>
-    <string name="delivery_method_description_string">Inperson could be a greate method</string>
+    <string name="delivery_method_description_string">In-person could be a great method</string>
     <string name="expired_date_title_string">Expired Date</string>
     <string name="expired_date_description_string">Expired tickets will not be used</string>
     <string name="expected_price_title_string">Expected price</string>
     <string name="expected_price_description_string">How much is appropriate</string>
-    <string name="special_notice_title_string">Special Notice</string>
-    <string name="special_notice_description_string">Anything in particular to note</string>
-    <string name="general_description_detail_string">Leave you though about this event</string>
+    <string name="location_title_string">Location</string>
+    <string name="location_description_string">Location of the event</string>
+    <string name="general_description_detail_string">Leave your thoughts about this event</string>
     <string name="general_description_title_string">General Description</string>
     <string name="new_ticket_string">Publish a new ticket</string>
     <string name="add_photo_string">Add a ticket photo</string>
