@@ -27,7 +27,7 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
 
         val desc = list[position].description
         val location = list[position].location
-        val price = list[position].price
+        val price = list[position].price.toLong()
         val date = list[position].time
         val delivery = list[position].delivery
 

@@ -38,7 +38,7 @@ class Add: Fragment() {
             descriptionField.getText().clear()
 
             val priceField:EditText = view.findViewById(R.id.expected_price_description)
-            val price:String = priceField.text.toString()
+            val price:Long = priceField.text.toString().toLong()
             priceField.getText().clear()
 
             val dateField:EditText = view.findViewById(R.id.expired_date_description)

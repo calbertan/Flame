@@ -19,4 +19,7 @@ data class User(
 
     @ColumnInfo(name = "user_email_column")
     var email: String = "",
+
+    @ColumnInfo(name = "user_balance_column")
+    var balance: Long = 10L,
 )

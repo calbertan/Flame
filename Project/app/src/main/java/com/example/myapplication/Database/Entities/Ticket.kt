@@ -22,7 +22,7 @@ data class Ticket (
     var location: String = "",
 
     @ColumnInfo(name = "ticket_price_column")
-    var price: String = "",
+    var price: Long = 0L,
 
     @ColumnInfo(name = "ticket_description_column")
     var description: String = "",
