@@ -225,7 +225,7 @@
                     >
 
                     <EditText
-                        android:id="@+id/PasswordField"
+                        android:id="@+id/InPasswordField"
                         android:layout_width="231dp"
                         android:layout_height="51dp"
                         android:layout_marginStart="0dp"

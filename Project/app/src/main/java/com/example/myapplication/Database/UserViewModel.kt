@@ -17,9 +17,9 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
         repository.insertTicket(ticket)
     }
 
-    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
-        return repository.getUserIdByUserInputNameOrEmail(nameEmail)
-    }
+//    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
+//        return repository.getUserIdByUserInputNameOrEmail(nameEmail)
+//    }
 }
 
 class UserViewModelFactory(private val repository: UserRepository)

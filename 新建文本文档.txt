@@ -40,7 +40,7 @@ class SignIn: AppCompatActivity() {
             var newNameEmail = false
 
             val t = Thread(Runnable{
-                if (databaseDao.getUserIdByUserInputNameOrEmail(usernameEmail) == null ) {
+                if (databaseDao.usernameExists(usernameEmail) == null ) {
                     newNameEmail = true
                 }
 //                if (databaseDao.emailExists(password) == null) {

@@ -22,9 +22,9 @@ class UserRepository(private val databaseDao: UserDatabaseDao) {
         }
     }
 
-    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
-        return databaseDao.getUserIdByUserInputNameOrEmail(nameEmail)
-    }
+//    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
+//        return databaseDao.getUserIdByUserInputNameOrEmail(nameEmail)
+//    }
 
 
 }

@@ -57,14 +57,21 @@ class SignUp: AppCompatActivity() {
             t.join()
 
             if(newUser && newEmail){
-                val randId = (0..100000).random().toLong()
-                val user: User = User(name= username, password = password, email=email)
-                println("debug: $user")
+                if(username == "")
+                    Toast.makeText(applicationContext, "please enter a username", Toast.LENGTH_SHORT).show()
+                else if(email == "")
+                    Toast.makeText(applicationContext, "please enter an email", Toast.LENGTH_SHORT).show()
+                else if(password == "")
+                    Toast.makeText(applicationContext, "please enter a password", Toast.LENGTH_SHORT).show()
+                else {
+                    val user: User = User(name = username, password = password, email = email)
+                    println("debug: $user")
 
-                viewModel.insertUser(user)
+                    viewModel.insertUser(user)
 
-                val intent = Intent(this, Activity::class.java)
-                startActivity(intent)
+                    val intent = Intent(this, Activity::class.java)
+                    startActivity(intent)
+                }
             }
             else {
                 if(!newUser)

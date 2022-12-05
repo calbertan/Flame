@@ -61,10 +61,10 @@ interface UserDatabaseDao {
     * */
 
     @Query("SELECT user_password_column FROM user_table WHERE user_name_column = :nameEmail OR user_email_column = :nameEmail")
-    suspend fun getPasswordByUserInputNameOrEmail(nameEmail: String) : String
+    fun getPasswordByUserInputNameOrEmail(nameEmail: String) : String
 
     @Query("SELECT user_id FROM user_table WHERE user_name_column = :nameEmail OR user_email_column = :nameEmail")
-    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long
+    fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long?
 
     @Query("SELECT user_id FROM user_table WHERE user_name_column = :name")
     fun usernameExists(name: String): Long?
