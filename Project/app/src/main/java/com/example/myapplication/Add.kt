@@ -123,6 +123,9 @@ class Add: Fragment() {
         return view
     }
 
+
+    // this is a test function for test inserting bitmap to database
+    // this only generate a bitmap
     private suspend fun getBitmap(): Bitmap {
         val loading = ImageLoader(requireContext())
         val request = ImageRequest.Builder(requireContext())
