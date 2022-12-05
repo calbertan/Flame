@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -59,9 +60,11 @@ class SignIn: AppCompatActivity() {
                 p.join()
 
                 if(passwordCorrect == true){
-                    var globals = Globals()
-                    globals.currentUser = usernameEmail
-                    println("debug: ${globals.currentUser}")
+                    val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.apply{
+                        putString("USER_KEY", usernameEmail)
+                    }.apply()
 
                     val intent = Intent(this, Activity::class.java)
                     startActivity(intent)

@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,16 +33,21 @@ class Add: Fragment() {
             factory = UserViewModelFactory(repository)
             viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
-            var globals = Globals()
-            var currentUser = globals.currentUser
-            println("debug: $currentUser")
-            var currentid:Long = 0L
+//            var globals = Globals()
+//            var currentUser = globals.currentUser
+//            println("debug: $currentUser")
+//            var currentid:Long = 0L
 
-//            val t = Thread(Runnable{
-//                currentid = databaseDao.usernameExists(currentUser)!!
-//            })
-//            t.start()
-//            t.join()
+            var currentid:Long = 0L
+            val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+            val currentUser:String? = sharedPreferences?.getString("USER_KEY",null)
+            println("debug: $currentUser ")
+
+            val t = Thread(Runnable{
+                currentid = databaseDao.usernameExists(currentUser!!)!!
+            })
+            t.start()
+            t.join()
 
 
             val ticket: Ticket = Ticket(

@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -69,8 +70,11 @@ class SignUp: AppCompatActivity() {
 
                     viewModel.insertUser(user)
 
-                    var globals = Globals()
-                    globals.currentUser = username
+                    val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.apply{
+                        putString("USER_KEY", username)
+                    }.apply()
 
                     val intent = Intent(this, Activity::class.java)
                     startActivity(intent)
