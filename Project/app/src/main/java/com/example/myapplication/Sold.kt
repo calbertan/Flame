@@ -32,9 +32,6 @@ class Sold: Fragment() {
         var currentid:Long = 0L
         val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val currentUser:String? = sharedPreferences?.getString("USER_KEY",null)
-        println("debug: $currentUser ")
-
-
 
         listView = view.findViewById(R.id.ticket_list)
         arrayList = ArrayList()

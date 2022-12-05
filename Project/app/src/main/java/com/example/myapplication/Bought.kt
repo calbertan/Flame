@@ -49,6 +49,7 @@ class Bought: Fragment() {
 //
 //        viewModel.allLiveData.observe(requireActivity()){
 //            //update listView
+//            myTickets.clear()
 //            for (i in 0..it.size) {
 //                println("debug $it.")
 //                if (it[i].buyerId == currentid)

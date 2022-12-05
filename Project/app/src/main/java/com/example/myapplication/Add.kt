@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -26,6 +27,7 @@ class Add: Fragment() {
     private lateinit var repository: UserRepository
     private lateinit var factory: UserViewModelFactory
     private lateinit var viewModel: UserViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,26 +42,38 @@ class Add: Fragment() {
             factory = UserViewModelFactory(repository)
             viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
-            val descriptionField:EditText = view.findViewById(R.id.general_description_detail)
-            val description:String = descriptionField.text.toString()
-            descriptionField.getText().clear()
+            var valid = true
 
+            var description: String=""
+            val descriptionField:EditText = view.findViewById(R.id.general_description_detail)
+            if(descriptionField.text.toString() == "") {
+                Toast.makeText(context, "please enter a description", Toast.LENGTH_SHORT).show()
+                valid = false
+            }
+            else {
+                description = descriptionField.text.toString()
+            }
+
+            var price:Double = 0.0;
             val priceField:EditText = view.findViewById(R.id.expected_price_description)
-            val price:Long = priceField.text.toString().toLong()
-            priceField.getText().clear()
+            if(priceField.text.toString() == ""){
+                Toast.makeText(context, "please enter a price", Toast.LENGTH_SHORT).show()
+                valid = false
+            }
+            else{
+                println("debug: ${priceField.text}")
+                price = priceField.text.toString().toDouble()
+            }
+
 
             val dateField:EditText = view.findViewById(R.id.expired_date_description)
             val date:String = dateField.text.toString()
-            dateField.getText().clear()
 
             val locationField:EditText = view.findViewById(R.id.location_description)
             val location:String = locationField.text.toString()
-            locationField.getText().clear()
 
             val deliveryField:EditText = view.findViewById(R.id.delivery_method_description)
             val delivery:String = deliveryField.text.toString()
-            deliveryField.getText().clear()
-
 
             var currentid:Long = 0L
             val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
@@ -88,8 +102,36 @@ class Add: Fragment() {
                 viewModel.insertTicket(ticket)
             }
 
+            if(valid) {
+                descriptionField.getText().clear()
+                priceField.getText().clear()
+                dateField.getText().clear()
+                locationField.getText().clear()
+                deliveryField.getText().clear()
 
+                val t = Thread(Runnable {
+                    currentid = databaseDao.usernameExists(currentUser!!)!!
+                })
+                t.start()
+                t.join()
+                
+                lifecycleScope.Launch{
+                  val ticket: Ticket = Ticket(
+                      time = date,
+                      location = location,
+                      price = price,
+                      description = description,
+                      delivery = delivery,
+                      status = 0,
+                      userId = 0L,
+                      buyerId = -1L,
+                      sellerId = currentid
+                      ticketPhoto = getBitmap()
+                  )
+                  viewModel.insertTicket(ticket)
+                }
 
+            }
         }
 
         return view
