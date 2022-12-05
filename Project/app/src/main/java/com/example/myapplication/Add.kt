@@ -7,10 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -34,6 +31,11 @@ class Add: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.publish, container, false)
+
+        val uploadImage:ImageView = view.findViewById(R.id.rectangle_14)
+        uploadImage.setOnClickListener(){
+
+        }
 
         val readyButton: TextView = view.findViewById(R.id.Ready)
         readyButton.setOnClickListener() {
@@ -86,22 +88,6 @@ class Add: Fragment() {
             t.start()
             t.join()
 
-            lifecycleScope.launch {
-                val ticket: Ticket = Ticket(
-                    time = date,
-                    location = location,
-                    price = price,
-                    description = description,
-                    delivery = delivery,
-                    status = 0,
-                    userId = 0L,
-                    buyerId = -1L,
-                    sellerId = currentid,
-                    ticketPhoto = getBitmap()
-                )
-                viewModel.insertTicket(ticket)
-            }
-
             if(valid) {
                 descriptionField.getText().clear()
                 priceField.getText().clear()
@@ -115,7 +101,7 @@ class Add: Fragment() {
                 t.start()
                 t.join()
                 
-                lifecycleScope.Launch{
+                lifecycleScope.launch{
                   val ticket: Ticket = Ticket(
                       time = date,
                       location = location,
@@ -125,7 +111,7 @@ class Add: Fragment() {
                       status = 0,
                       userId = 0L,
                       buyerId = -1L,
-                      sellerId = currentid
+                      sellerId = currentid,
                       ticketPhoto = getBitmap()
                   )
                   viewModel.insertTicket(ticket)
