@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -44,9 +45,6 @@ class SignIn: AppCompatActivity() {
                 if (databaseDao.getUserIdByUserInputNameOrEmail(usernameEmail) == null ) {
                     newNameEmail = true
                 }
-//                if (databaseDao.emailExists(password) == null) {
-//                    newNameEmail = true
-//                }
             })
             t.start()
             t.join()
@@ -63,6 +61,12 @@ class SignIn: AppCompatActivity() {
                 p.join()
 
                 if(passwordCorrect == true){
+                    val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.apply{
+                        putString("USER_KEY", usernameEmail)
+                    }.apply()
+
                     val intent = Intent(this, Activity::class.java)
                     startActivity(intent)
                 }
