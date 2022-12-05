@@ -12,7 +12,7 @@ import com.example.myapplication.Database.Entities.User
     entities = [
         User::class,
         Ticket::class],
-    version = 1
+    version = 2
 )
 abstract class UserDatabase : RoomDatabase() {
 
