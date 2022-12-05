@@ -170,7 +170,8 @@
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
                             android:background="@drawable/rectangle6_shape"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:text=""/>
 
                         <TextView
                             android:id="@+id/UserName"
@@ -198,7 +199,8 @@
                             android:layout_height="51dp"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
-                            android:background="@drawable/rectangle7_shape" />
+                            android:background="@drawable/rectangle7_shape"
+                            android:text=""/>
 
                         <TextView
                             android:id="@+id/Email"
@@ -226,7 +228,8 @@
                             android:layout_height="51dp"
                             android:layout_marginStart="0dp"
                             android:layout_marginTop="18dp"
-                            android:background="@drawable/rectangle8_shape" />
+                            android:background="@drawable/rectangle8_shape"
+                            android:text="" />
 
                         <TextView
                             android:id="@+id/password"
