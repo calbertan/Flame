@@ -46,6 +46,7 @@
 				android:layout_marginLeft="12dp"
 				android:layout_marginTop="654dp"
 				android:hint="@string/delivery_method_description_string"
+				android:text=""
 				android:textColor="@color/delivery_method_description_color"
 				android:textSize="20sp" />
 
@@ -84,6 +85,7 @@
 				android:layout_marginLeft="12dp"
 				android:layout_marginTop="582dp"
 				android:hint="@string/expired_date_description_string"
+				android:text=""
 				android:textColor="@color/delivery_method_description_color"
 				android:textSize="20sp" />
 
@@ -122,8 +124,9 @@
 				android:layout_marginStart="12dp"
 				android:layout_marginTop="510dp"
 				android:hint="@string/expected_price_description_string"
+				android:inputType="number|numberDecimal"
+				android:text=""
 				android:textColor="@color/delivery_method_description_color"
-				android:inputType="number"
 				android:textSize="20sp" />
 
 			<ImageView
@@ -161,6 +164,7 @@
 				android:layout_marginStart="12dp"
 				android:layout_marginTop="373dp"
 				android:hint="@string/location_description_string"
+				android:text=""
 				android:textColor="@color/delivery_method_description_color" />
 
 <!--			<View-->
@@ -178,6 +182,7 @@
 				android:layout_gravity="center_horizontal|center"
 				android:layout_marginStart="12dp"
 				android:layout_marginTop="283dp"
+				android:text=""
 				android:hint="@string/general_description_detail_string"
 				android:textColor="@color/delivery_method_description_color" />
 

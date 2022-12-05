@@ -21,5 +21,5 @@ data class User(
     var email: String = "",
 
     @ColumnInfo(name = "user_balance_column")
-    var balance: Long = 10L,
+    var balance: Double = 10.0,
 )
