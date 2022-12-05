@@ -70,6 +70,7 @@ class Add: Fragment() {
                 location = location,
                 price = price,
                 description = description,
+                delivery = delivery,
                 status = 0,
                 userId = 0L,
                 buyerId = -1L,

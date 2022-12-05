@@ -27,6 +27,9 @@ data class Ticket (
     @ColumnInfo(name = "ticket_description_column")
     var description: String = "",
 
+    @ColumnInfo(name = "delivery_column")
+    var delivery: String = "",
+
     // ticket status, 0 means not sold(also means belongs to seller), 1 means sold(also means belong to buyer)
     // default 0
     @ColumnInfo(name = "ticket_status_column")
