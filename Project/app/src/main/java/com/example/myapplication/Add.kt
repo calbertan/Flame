@@ -12,7 +12,9 @@ class Add: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.add, container, false)
+        val view = inflater.inflate(R.layout.publish, container, false)
+
+
         return view
     }
 }

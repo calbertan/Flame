@@ -61,7 +61,7 @@ interface UserDatabaseDao {
     * */
 
     @Query("SELECT user_password_column FROM user_table WHERE user_name_column = :nameEmail OR user_email_column = :nameEmail")
-    fun getPasswordByUserInputNameOrEmail(nameEmail: String) : String
+    fun getPasswordByUserInputNameOrEmail(nameEmail: String) : String?
 
     @Query("SELECT user_id FROM user_table WHERE user_name_column = :nameEmail OR user_email_column = :nameEmail")
     fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long?

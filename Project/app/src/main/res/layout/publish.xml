@@ -1,0 +1,272 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<ScrollView
+		android:id="@+id/Publish_page"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:id="@+id/content_container"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<!--			<View-->
+			<!--				android:id="@+id/_bg__Publish_page"-->
+			<!--				android:layout_width="360dp"-->
+			<!--				android:layout_height="800dp"-->
+			<!--				android:layout_marginStart="0dp"-->
+			<!--				android:layout_marginTop="0dp"-->
+			<!--				android:background="@drawable/_bg__publish_page_shape" />-->
+
+			<TextView
+				android:id="@+id/delivery_method_title"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="623dp"
+				android:text="@string/delivery_method_title_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+<!--			<View-->
+<!--				android:id="@+id/delivery_method_textbox"-->
+<!--				android:layout_width="match_parent"-->
+<!--				android:layout_height="34dp"-->
+<!--				android:layout_marginTop="663dp"-->
+<!--				android:background="@drawable/delivery_method_textbox_shape" />-->
+
+			<EditText
+				android:id="@+id/delivery_method_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginLeft="12dp"
+				android:layout_marginTop="654dp"
+				android:hint="@string/delivery_method_description_string"
+				android:textColor="@color/delivery_method_description_color"
+				android:textSize="20sp" />
+
+			<ImageView
+				android:id="@+id/delivery_method_icon"
+				android:layout_width="17dp"
+				android:layout_height="17dp"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="670dp"
+				android:contentDescription="delivery_method_icon"
+				android:src="@drawable/delivery_method_icon" />
+
+			<TextView
+				android:id="@+id/expired_date_title"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="551dp"
+				android:text="@string/expired_date_title_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<!--			<View-->
+			<!--				android:id="@+id/expired_date_textbox"-->
+			<!--				android:layout_width="match_parent"-->
+			<!--				android:layout_height="34dp"-->
+			<!--				android:layout_marginTop="591dp"-->
+			<!--				android:background="@drawable/expired_date_textbox_shape" />-->
+
+			<EditText
+				android:id="@+id/expired_date_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginLeft="12dp"
+				android:layout_marginTop="582dp"
+				android:hint="@string/expired_date_description_string"
+				android:textColor="@color/delivery_method_description_color"
+				android:textSize="20sp" />
+
+			<ImageView
+				android:id="@+id/expired_date_icon"
+				android:layout_width="17dp"
+				android:layout_height="17dp"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="598dp"
+				android:contentDescription="expired_date_icon"
+				android:src="@drawable/expired_date_icon" />
+
+			<TextView
+				android:id="@+id/expected_price_title"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="479dp"
+				android:text="@string/expected_price_title_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<!--			<View-->
+			<!--				android:id="@+id/expected_price_textbox"-->
+			<!--				android:layout_width="match_parent"-->
+			<!--				android:layout_height="34dp"-->
+			<!--				android:layout_marginTop="519dp"-->
+			<!--				android:background="@drawable/expected_price_textbox_shape" />-->
+
+			<EditText
+				android:id="@+id/expected_price_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginStart="12dp"
+				android:layout_marginTop="510dp"
+				android:hint="@string/expected_price_description_string"
+				android:textColor="@color/delivery_method_description_color"
+				android:textSize="20sp" />
+
+			<ImageView
+				android:id="@+id/expected_price_icon"
+				android:layout_width="17dp"
+				android:layout_height="17dp"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="526dp"
+				android:contentDescription="expected_price_icon"
+				android:src="@drawable/expected_price_icon" />
+
+			<TextView
+				android:id="@+id/special_notice_title"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="342dp"
+				android:text="@string/special_notice_title_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+<!--			<View-->
+<!--				android:id="@+id/special_notice_textbox"-->
+<!--				android:layout_width="match_parent"-->
+<!--				android:layout_height="79dp"-->
+<!--				android:layout_marginTop="402dp"-->
+<!--				android:background="@drawable/special_notice_textbox_shape" />-->
+
+			<EditText
+				android:layout_marginStart="12dp"
+				android:id="@+id/special_notice_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginTop="373dp"
+				android:text="@string/special_notice_description_string"
+				android:textColor="@color/delivery_method_description_color" />
+
+<!--			<View-->
+<!--				android:id="@+id/general_description_textbox"-->
+<!--				android:layout_width="336dp"-->
+<!--				android:layout_height="102dp"-->
+<!--				android:layout_marginStart="13dp"-->
+<!--				android:layout_marginTop="262dp"-->
+<!--				android:background="@drawable/general_description_textbox_shape" />-->
+
+			<EditText
+				android:id="@+id/general_description_detail"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginTop="283dp"
+				android:layout_marginStart="12dp"
+				android:hint="@string/general_description_detail_string"
+				android:textColor="@color/delivery_method_description_color" />
+
+			<TextView
+				android:id="@+id/general_description_title"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="252dp"
+				android:text="@string/general_description_title_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<View
+				android:id="@+id/DividingLine"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginTop="232dp"
+				android:background="@drawable/dividingline_shape" />
+
+			<TextView
+				android:id="@+id/new_ticket"
+				android:layout_width="217dp"
+				android:layout_height="54dp"
+				android:layout_marginLeft="13dp"
+				android:layout_marginTop="58dp"
+				android:text="@string/new_ticket_string"
+				android:textColor="@color/delivery_method_title_color"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<View
+				android:id="@+id/photo_background"
+				android:layout_width="match_parent"
+				android:layout_height="110dp"
+				android:layout_marginTop="98dp"
+				android:background="@drawable/photo_background_shape" />
+
+			<TextView
+				android:id="@+id/add_photo"
+				android:layout_width="249dp"
+				android:layout_height="45dp"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginLeft="59dp"
+				android:layout_marginTop="140dp"
+				android:gravity="center"
+				android:text="@string/add_photo_string"
+				android:textColor="@color/delivery_method_title_color" />
+
+
+			<RelativeLayout
+				android:id="@+id/Iconsax"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="168dp"
+				android:layout_marginTop="128dp">
+
+				<ImageView
+					android:id="@+id/Vector_ek5"
+					android:layout_width="12dp"
+					android:layout_height="12dp"
+					android:layout_marginStart="6dp"
+					android:layout_marginTop="6dp"
+					android:contentDescription="Vector_ek5"
+					android:src="@drawable/vector_ek11" />
+
+			</RelativeLayout>
+
+			<View
+				android:id="@+id/Rectangle17"
+				android:layout_width="249dp"
+				android:layout_height="25dp"
+				android:layout_marginStart="54dp"
+				android:layout_marginTop="715dp"
+				android:background="@drawable/rectangle17_shape" />
+
+			<TextView
+				android:id="@+id/Ready"
+				android:layout_width="240dp"
+				android:layout_height="35.5dp"
+				android:layout_gravity="center_horizontal|center"
+				android:layout_marginLeft="62dp"
+				android:layout_marginTop="710dp"
+				android:gravity="center"
+				android:text="@string/Ready"
+				android:textColor="@color/_bg__Publish_page_color"
+				android:textSize="15sp" />
+
+		</RelativeLayout>
+
+	</ScrollView>
+</RelativeLayout>

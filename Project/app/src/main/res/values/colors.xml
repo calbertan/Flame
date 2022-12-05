@@ -28,4 +28,17 @@
     <color name="Rectangle5_color">#493030</color>
     <color name="Signup_color">#2C1818</color>
     <color name="rectangle6_color">#D9D9D9</color>
+
+    <color name="_bg__Manage_ticket_color">#FFFFFF</color>
+    <color name="Rectangle11_color">#D9D9D9</color>
+    <color name="Flame_color">#000000</color>
+    <color name="Rectangle18_color">#898787</color>
+
+    <color name="_bg__Publish_page_color">#FFFFFF</color>
+    <color name="bottom_menu_background_color">#D9D9D9</color>
+    <color name="delivery_method_title_color">#000000</color>
+    <color name="delivery_method_textbox_color">#ffffff</color>
+    <color name="delivery_method_description_color">#959595</color>
+    <color name="photo_background_color">#EFEFEF</color>
+    <color name="Rectangle17_color">#493030</color>
 </resources>

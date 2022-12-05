@@ -233,15 +233,15 @@
                         android:background="@drawable/rectangle7_shape"
                         android:gravity="center" />
 
-                    <TextView android:id="@+id/Email"
-                        android:textSize="12sp"
-                        android:textColor="@color/donthaveaccount"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
+                    <TextView
+                        android:id="@+id/Email"
                         android:layout_width="246dp"
                         android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
                         android:text="@string/Password"
-                        />
+                        android:textColor="@color/donthaveaccount"
+                        android:textSize="12sp" />
 
                 </RelativeLayout>
 
