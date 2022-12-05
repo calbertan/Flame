@@ -1,6 +1,8 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -60,6 +62,13 @@ class Sold: Fragment() {
             myAdapter.notifyDataSetChanged()
         }
 
+
+
+
+
         return view
     }
+
+
+
 }

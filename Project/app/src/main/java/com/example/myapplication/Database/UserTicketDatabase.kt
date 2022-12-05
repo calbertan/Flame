@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.Entities.User
 
@@ -14,6 +15,7 @@ import com.example.myapplication.Database.Entities.User
         Ticket::class],
     version = 2
 )
+@TypeConverters(Converters::class)
 abstract class UserDatabase : RoomDatabase() {
 
     abstract val userDatabaseDao: UserDatabaseDao
