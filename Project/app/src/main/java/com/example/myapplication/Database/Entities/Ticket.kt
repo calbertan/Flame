@@ -1,5 +1,7 @@
 package com.example.myapplication.Database.Entities
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
@@ -50,4 +52,7 @@ data class Ticket (
     // for a ticket the owner of the ticket is the one who publish it and sell it
     @ColumnInfo(name = "sellerId")
     var sellerId: Long = userId,
+
+    @ColumnInfo(name = "ticket_photo_column")
+    var ticketPhoto: Bitmap
 )

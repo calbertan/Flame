@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
+import coil.load
 import com.example.myapplication.Database.Entities.Ticket
 
 class MyAdapter(private val context: Context, private var list: List<Ticket>): BaseAdapter() {
@@ -22,7 +24,7 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
 
     override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
         val view = View.inflate(context, R.layout.adapter_layout, null)
-
+        var img_field : ImageView = view.findViewById(R.id.rectangle_14)
         //adapter layout is the layout of a single ticket
 
         val desc = list[position].description
@@ -30,6 +32,9 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
         val price = list[position].price.toLong()
         val date = list[position].time
         val delivery = list[position].delivery
+        val img = list[position].ticketPhoto
+
+        img_field.load(img)
 
         return view
     }
