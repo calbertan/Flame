@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SignIn: AppCompatActivity() {
     private lateinit var welcome: TextView
-    private lateinit var signIn: TextView
+    private lateinit var signUp: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +22,8 @@ class SignIn: AppCompatActivity() {
             startActivity(intent)
         }
 
-        signIn = findViewById(R.id.no_Account_Signup)
-        signIn.setOnClickListener() {
+        signUp = findViewById(R.id.no_Account_Signup)
+        signUp.setOnClickListener() {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }

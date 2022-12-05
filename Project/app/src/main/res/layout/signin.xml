@@ -190,7 +190,6 @@
 
                 <RelativeLayout android:id="@+id/Frame6"
                     android:layout_marginTop="27dp"
-                    android:layout_marginStart="27dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -220,9 +219,9 @@
 
                 <RelativeLayout android:id="@+id/Frame7"
                     android:layout_marginTop="101dp"
-                    android:layout_marginStart="27dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     >
 
                     <EditText
@@ -231,7 +230,8 @@
                         android:layout_height="51dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="18dp"
-                        android:background="@drawable/rectangle7_shape" />
+                        android:background="@drawable/rectangle7_shape"
+                        android:gravity="center" />
 
                     <TextView android:id="@+id/Email"
                         android:textSize="12sp"

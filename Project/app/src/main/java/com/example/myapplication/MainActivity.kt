@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private val tabTitles = arrayOf("", "", "")
     private lateinit var tabLayoutMediator: TabLayoutMediator
     private lateinit var start:TextView
+    private lateinit var signUp:TextView
 
     @SuppressLint("ClickableViewAccessibility", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +44,18 @@ class MainActivity : AppCompatActivity() {
         }
         start = findViewById(R.id.GetStarted)
         start.setOnClickListener() {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+        }
+
+        start = findViewById(R.id.GetStarted)
+        start.setOnClickListener() {
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+        }
+
+        signUp = findViewById(R.id.No_Account_Signup)
+        signUp.setOnClickListener() {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
