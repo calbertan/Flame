@@ -69,6 +69,9 @@ class SignUp: AppCompatActivity() {
 
                     viewModel.insertUser(user)
 
+                    var globals = Globals()
+                    globals.currentUser = username
+
                     val intent = Intent(this, Activity::class.java)
                     startActivity(intent)
                 }

@@ -43,9 +43,6 @@ class SignIn: AppCompatActivity() {
                 if (databaseDao.getUserIdByUserInputNameOrEmail(usernameEmail) == null ) {
                     newNameEmail = true
                 }
-//                if (databaseDao.emailExists(password) == null) {
-//                    newNameEmail = true
-//                }
             })
             t.start()
             t.join()
@@ -62,6 +59,10 @@ class SignIn: AppCompatActivity() {
                 p.join()
 
                 if(passwordCorrect == true){
+                    var globals = Globals()
+                    globals.currentUser = usernameEmail
+                    println("debug: ${globals.currentUser}")
+
                     val intent = Intent(this, Activity::class.java)
                     startActivity(intent)
                 }

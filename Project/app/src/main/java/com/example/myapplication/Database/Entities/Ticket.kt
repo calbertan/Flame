@@ -11,7 +11,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "ticket_table")
 data class Ticket (
     // primary key ticket_id, use this to identify each ticket
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var ticket_id: Long = 0L,
 
     // expire date
