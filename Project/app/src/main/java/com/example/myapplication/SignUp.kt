@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlin.concurrent.thread
 
 class SignUp: AppCompatActivity() {
-    private lateinit var burnning:TextView
+    private lateinit var burnning: Button
     private lateinit var signIn: TextView
     private lateinit var databaseDao: UserDatabaseDao
     private lateinit var repository: UserRepository

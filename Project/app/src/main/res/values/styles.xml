@@ -19,4 +19,9 @@
         <attr name="leftBottomRadius" format="dimension"/>
         <attr name="rightBottomRadius" format="dimension"/>
     </declare-styleable>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="colorAccent">@color/Rectangle_3_color</item>
+        <item name="backgroundTint">@color/Rectangle_3_color</item>
+    </style>
 </resources>

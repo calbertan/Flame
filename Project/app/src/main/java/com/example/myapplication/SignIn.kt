@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.Database.*
 
 class SignIn: AppCompatActivity() {
-    private lateinit var welcome: TextView
+    private lateinit var welcome: Button
     private lateinit var signUp: TextView
     private lateinit var databaseDao: UserDatabaseDao
     private lateinit var repository: UserRepository
