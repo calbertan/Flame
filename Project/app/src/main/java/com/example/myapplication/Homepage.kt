@@ -16,6 +16,7 @@ import com.example.myapplication.Database.*
 import com.example.myapplication.Database.Entities.Ticket
 
 class Homepage: Fragment() {
+<<<<<<< HEAD
 //    private lateinit var iv: ImageView
 //    private lateinit var bitmap: Bitmap
 //    private lateinit var bitmap1:Bitmap
@@ -27,12 +28,15 @@ class Homepage: Fragment() {
     private lateinit var factory: UserViewModelFactory
     private lateinit var viewModel: UserViewModel
 
+=======
+>>>>>>> 7d1b86b7efb64d0987d7477f60b03cd3f68bf324
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.homepage, container, false)
+<<<<<<< HEAD
         /*iv = view.findViewById(R.id.rectangle_14)
         bitmap = BitmapFactory.decodeResource(resources, R.drawable.rectangle_14)
         bitmap1 = RoundedBitmapDrawable(bitmap, 500, 300, 20, 3)*/
@@ -54,6 +58,8 @@ class Homepage: Fragment() {
             myAdapter.notifyDataSetChanged()
         }
 
+=======
+>>>>>>> 7d1b86b7efb64d0987d7477f60b03cd3f68bf324
         return view
     }
 }
