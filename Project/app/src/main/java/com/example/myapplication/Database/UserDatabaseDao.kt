@@ -80,6 +80,9 @@ interface UserDatabaseDao {
     @Query("SELECT user_balance_column FROM user_table WHERE user_name_column = :username")
     fun balanceFromUsername(username: String): Double?
 
+    @Query("SELECT user_balance_column FROM user_table WHERE user_id = :id")
+    fun balanceFromId(id: Long): Double?
+
     @Query("UPDATE user_table SET user_balance_column= :newBalance WHERE user_id = :id")
     suspend fun updateBalance(id: Long, newBalance: Double)
 

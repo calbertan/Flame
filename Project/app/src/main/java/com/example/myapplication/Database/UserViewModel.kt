@@ -30,7 +30,9 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
 
     fun updateBalance(id: Long, newBalance: Double){
         repository.updateBalance(id, newBalance)
-
+    }
+    fun balanceFromId(id: Long): Double{
+        return repository.balanceFromId(id)
     }
 
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {

@@ -119,9 +119,11 @@ class Homepage: Fragment() {
                     }
                     else if(balance > ticket.price){
                         lifecycleScope.launch{
+                            val buyerBalance = viewModel.balanceFromId(ticket.buyerId)
                             viewModel.updateTicketStatus(ticket.ticket_id,1)
                             viewModel.updateTicketBuyer(ticket.ticket_id, currentid)
                             viewModel.updateBalance(currentid, balance - ticket.price)
+                            viewModel.updateBalance(ticket.buyerId, buyerBalance!! + ticket.price)
                         }
                         Toast.makeText(context, "ticket bought!", Toast.LENGTH_SHORT).show()
                         dialog.dismiss()

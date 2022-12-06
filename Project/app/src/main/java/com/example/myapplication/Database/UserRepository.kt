@@ -38,6 +38,15 @@ class UserRepository(private val databaseDao: UserDatabaseDao) {
         }
     }
 
+    fun balanceFromId(id: Long): Double{
+        var balance = 0.0
+        CoroutineScope(IO).launch {
+            if (databaseDao.balanceFromId(id) != null)
+                balance = databaseDao.balanceFromId(id)!!
+        }
+        return balance
+    }
+
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
 //        return databaseDao.getUserIdByUserInputNameOrEmail(nameEmail)
 //    }

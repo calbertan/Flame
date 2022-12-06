@@ -55,7 +55,7 @@ class Sold: Fragment() {
             myTickets.clear()
             for (i in 0..(it.size-1)) {
                 println("debug $it.")
-                if (it[i].sellerId == currentid)
+                if (it[i].sellerId == currentid && it[i].status == 0)
                     myTickets.add(it[i])
             }
             myAdapter.replaceList(myTickets)
