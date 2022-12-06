@@ -215,12 +215,14 @@
 				android:textSize="20sp"
 				android:textStyle="bold" />
 
-			<View
+			<ImageView
 				android:id="@+id/photo_background"
 				android:layout_width="match_parent"
 				android:layout_height="110dp"
 				android:layout_marginTop="98dp"
-				android:background="@drawable/photo_background_shape" />
+				android:adjustViewBounds="true"
+				android:background="@drawable/photo_background_shape"
+				android:scaleType="fitXY" />
 
 			<TextView
 				android:id="@+id/add_photo"
