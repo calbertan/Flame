@@ -27,37 +27,38 @@ class Bought: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.bought, container, false)
 
-//        var currentid:Long = 0L
-//        val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-//        val currentUser:String? = sharedPreferences?.getString("USER_KEY",null)
-//        println("debug: $currentUser ")
-//
-//        val t = Thread(Runnable{
-//            currentid = databaseDao.usernameExists(currentUser!!)!!
-//        })
-//
-//        listView = view.findViewById(R.id.ticket_list)
-//        arrayList = ArrayList()
-//        myAdapter = MyAdapter(requireActivity(),arrayList)
-//        listView.adapter = myAdapter
-//        val myTickets: MutableList<Ticket> = mutableListOf<Ticket>()
-//
-//        databaseDao = UserDatabase.getInstance(requireContext()).userDatabaseDao
-//        repository = UserRepository(databaseDao)
-//        factory = UserViewModelFactory(repository)
-//        viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
-//
-//        viewModel.allLiveData.observe(requireActivity()){
-//            //update listView
-//            myTickets.clear()
-//            for (i in 0..it.size) {
-//                println("debug $it.")
-//                if (it[i].buyerId == currentid)
-//                    myTickets.add(it[i])
-//            }
-//            myAdapter.replaceList(myTickets)
-//            myAdapter.notifyDataSetChanged()
-//        }
+        var currentid:Long = 0L
+        val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val currentUser:String? = sharedPreferences?.getString("USER_KEY",null)
+
+        listView = view.findViewById(R.id.ticket_list)
+        arrayList = ArrayList()
+        myAdapter = MyAdapter(requireActivity(),arrayList)
+        listView.adapter = myAdapter
+        val myTickets: MutableList<Ticket> = mutableListOf<Ticket>()
+
+        databaseDao = UserDatabase.getInstance(requireContext()).userDatabaseDao
+        repository = UserRepository(databaseDao)
+        factory = UserViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
+
+        val t = Thread(Runnable{
+            currentid = databaseDao.usernameExists(currentUser!!)!!
+        })
+        t.start()
+        t.join()
+
+        viewModel.allLiveData.observe(requireActivity()){
+            //update listView
+            myTickets.clear()
+            for (i in 0..(it.size-1)) {
+                println("debug $it.")
+                if (it[i].buyerId == currentid)
+                    myTickets.add(it[i])
+            }
+            myAdapter.replaceList(myTickets)
+            myAdapter.notifyDataSetChanged()
+        }
 
         return view
     }

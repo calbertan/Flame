@@ -48,6 +48,11 @@ interface UserDatabaseDao {
     @Query("DELETE FROM ticket_table WHERE ticket_id = :key") //":" indicates that it is a Bind variable
     suspend fun deleteTicket(key: Long)
 
+    @Query("UPDATE ticket_table SET ticket_status_column = :status WHERE ticket_id = :tid")
+    suspend fun updateTicketStatus(tid: Long, status: Int)
+
+    @Query("UPDATE ticket_table SET buyerid = :bid WHERE ticket_id = :tid")
+    suspend fun updateTicketBuyer(tid: Long, bid: Long)
 
     // for the sign in section
 
@@ -71,6 +76,14 @@ interface UserDatabaseDao {
 
     @Query("SELECT user_id FROM user_table WHERE user_email_column = :email")
     fun emailExists(email: String): Long?
+
+    @Query("SELECT user_balance_column FROM user_table WHERE user_name_column = :username")
+    fun balanceFromUsername(username: String): Double?
+
+    @Query("UPDATE user_table SET user_balance_column= :newBalance WHERE user_id = :id")
+    suspend fun updateBalance(id: Long, newBalance: Double)
+
+
 
 
 // this part has move to the controller part, as these query can not be implement here

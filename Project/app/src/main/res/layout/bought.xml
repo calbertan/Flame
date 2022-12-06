@@ -32,9 +32,10 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:layout_marginTop = "200dp"
+    <ListView
+        android:id="@+id/ticket_list"
+        android:layout_marginTop="125dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is the bought fragment"/>
+        android:layout_height="match_parent">
+    </ListView>
 </RelativeLayout>
