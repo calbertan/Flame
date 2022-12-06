@@ -3,16 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/drawable-v24/ticketsinfo.xml" value="0.1" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/adapter_layout.xml" value="0.2760416666666667" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/add.xml" value="0.25151362260343085" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/bought.xml" value="0.2760416666666667" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/homepage.xml" value="0.2760416666666667" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/individualinfo.xml" value="0.4433164128595601" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/main.xml" value="0.2760416666666667" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/publish.xml" value="0.33" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/sold.xml" value="0.2760416666666667" />
-        <entry key="..\:/SFU/STUDY/3rd Year/Flame/Project/app/src/main/res/layout/tickets_detailed_info.xml" value="0.25151362260343085" />
         <entry key="..\:/Users/Albert/SFU/2022 Fall/CMPT362/Flame/Project/app/src/main/res/layout/add.xml" value="0.3875" />
         <entry key="..\:/Users/Albert/SFU/2022 Fall/CMPT362/Flame/Project/app/src/main/res/layout/login.xml" value="0.2650273224043716" />
         <entry key="..\:/Users/Albert/SFU/2022 Fall/CMPT362/Flame/Project/app/src/main/res/layout/main.xml" value="0.20208333333333334" />
@@ -22,34 +12,41 @@
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/drawable-nodpi/bg_shape.xml" value="0.1" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/drawable/login_page.xml" value="0.1" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/activity_publish.xml" value="0.25" />
-        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/adapter_layout.xml" value="0.1" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/add.xml" value="0.144" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/bar.xml" value="0.25" />
-        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/bought.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/fragment_publish.xml" value="0.11770833333333333" />
-        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/homepage.xml" value="0.152" />
+        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/homepage.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/individualinfo.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/login.xml" value="0.2" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/main.xml" value="0.11770833333333333" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/manage.xml" value="0.13405797101449277" />
-        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/publish.xml" value="0.4" />
+        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/publish.xml" value="0.2" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/setting.xml" value="0.25" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/signin.xml" value="0.1" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/signup.xml" value="0.2" />
-        <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/sold.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/Albert/SFU/2022_Fall/CMPT_362/Flame/Project/app/src/main/res/layout/ui.xml" value="0.11770833333333333" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/drawable-nodpi/expected_price_textbox_shape.xml" value="0.1125" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/drawable-nodpi/login_page.xml" value="0.1125" />
         <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/drawable-nodpi/rectangle3_shape.xml" value="0.232" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/drawable/login_page.xml" value="0.1125" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/adapter_layout.xml" value="0.39947916666666666" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/add.xml" value="0.39947916666666666" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/bar.xml" value="0.39947916666666666" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/bought.xml" value="0.35190217391304346" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/homepage.xml" value="0.35190217391304346" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/individualinfo.xml" value="0.39947916666666666" />
         <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/login.xml" value="0.39947916666666666" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/main.xml" value="0.35190217391304346" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/manage.xml" value="0.39947916666666666" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/setting.xml" value="0.39947916666666666" />
         <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/signin.xml" value="0.39947916666666666" />
         <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/signup.xml" value="0.35190217391304346" />
+        <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/tickets_detailed_info.xml" value="0.19427558257345492" />
         <entry key="..\:/cmpt362/Final_Project/Flame/Project/app/src/main/res/layout/ui.xml" value="0.39947916666666666" />
       </map>
     </option>
   </component>
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
