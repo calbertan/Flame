@@ -7,34 +7,36 @@
         android:id="@+id/content_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-
+    
         <View
-            android:id="@+id/soldBar"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/sold_side" />
-
+                android:id="@+id/soldBar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/sold_side"/>
+    
         <TextView
-            android:id="@+id/Published"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal|center"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:textColor="@color/_bg__Publish_page_color"
-            android:layout_marginLeft="102dp"
-            android:layout_marginTop="7dp"
-            android:layout_width="163dp"
-            android:layout_height="27dp"
-            android:text="@string/Purchased_string"
-            />
+                android:id="@+id/Published"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:textColor="@color/_bg__Publish_page_color"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="7dp"
+                android:layout_width="163dp"
+                android:layout_height="27dp"
+                android:text="@string/Purchased_string"
+        />
 
     </RelativeLayout>
-
-    <TextView
-        android:layout_marginTop = "200dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is the bought fragment"/>
+    
+    <ListView
+            android:id="@+id/ticket_list_bought"
+            android:layout_marginTop="125dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    
+    </ListView>
 </RelativeLayout>

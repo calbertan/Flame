@@ -2,8 +2,8 @@
 <!--  _bg__Frame 37 from your XD file. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 	android:shape="rectangle" >
-	<corners android:bottomRightRadius="25dp"
-		android:bottomLeftRadius="25dp"/>
+	<corners android:bottomRightRadius="10dp"
+		android:bottomLeftRadius="10dp"/>
 	<solid android:color="@color/Rectangle18_color" />
 </shape>
 

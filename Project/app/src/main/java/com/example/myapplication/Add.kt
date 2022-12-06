@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.app.Activity.RESULT_OK
+import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -24,13 +25,25 @@ import com.example.myapplication.Database.Entities.User
 import kotlinx.coroutines.launch
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
+import java.text.SimpleDateFormat
+import java.util.*
 
-class Add: Fragment() {
+class Add: Fragment(),DatePickerDialog.OnDateSetListener {
     private lateinit var databaseDao: UserDatabaseDao
     private lateinit var repository: UserRepository
     private lateinit var factory: UserViewModelFactory
     private lateinit var viewModel: UserViewModel
     private lateinit var uploadImage: ImageView
+    private lateinit var dateField:TextView
+    private var year = 0
+    private var month = 0
+    private var day = 0
+    private var hours = 0
+    private var mins = 0
+    private var secs = 0
+    private lateinit var date: Date
+    private lateinit var selectedDate: Date
+    val calendar = Calendar.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +56,20 @@ class Add: Fragment() {
         uploadImage.setOnClickListener(){
             pickImageGallery()
         }
+        dateField = view.findViewById(R.id.expired_date_description)
+        dateField.setOnClickListener {
+            val datePickerDialog = context?.let { it1 ->
+                DatePickerDialog(
+                    it1,
+                    this,
+                    calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)
+                )
+            }
+            datePickerDialog?.show()
+        }
+
 
         val readyButton: TextView = view.findViewById(R.id.Ready)
         readyButton.setOnClickListener() {
@@ -75,8 +102,6 @@ class Add: Fragment() {
             }
 
 
-            val dateField:EditText = view.findViewById(R.id.expired_date_description)
-            val date:String = dateField.text.toString()
 
             val locationField:EditText = view.findViewById(R.id.location_description)
             val location:String = locationField.text.toString()
@@ -95,22 +120,25 @@ class Add: Fragment() {
             t.start()
             t.join()
 
+
+
             if(valid) {
                 descriptionField.getText().clear()
                 priceField.getText().clear()
-                dateField.getText().clear()
+                dateField.text = ""
                 locationField.getText().clear()
                 deliveryField.getText().clear()
+
 
                 val t = Thread(Runnable {
                     currentid = databaseDao.usernameExists(currentUser!!)!!
                 })
                 t.start()
                 t.join()
-                
+                val inputFormat = SimpleDateFormat("yyyyMMddHHmmss")
                 lifecycleScope.launch{
                   val ticket: Ticket = Ticket(
-                      time = date,
+                      time = inputFormat.format(date),
                       location = location,
                       price = price,
                       description = description,
@@ -203,4 +231,16 @@ private fun compressImage(image: Bitmap): Bitmap? {
     //把ByteArrayInputStream数据生成图片
     return BitmapFactory.decodeStream(isBm, null, null)
 }
+
+    override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
+        year = p1
+        month = p2
+        day = p3
+        selectedDate = Date(year, month, day, hours, mins, secs)
+        date = selectedDate
+        date.year = date.year - 1900
+        val outputFormat = SimpleDateFormat("h:mm:ss a dd-MMM-yyyy")
+        val outputDate = outputFormat.format(date)
+        dateField.text = outputDate
+    }
 }

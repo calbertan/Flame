@@ -5,6 +5,7 @@ import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.Entities.User
 import com.example.myapplication.Database.Entities.Relations.UserWithTickets
 import kotlinx.coroutines.flow.Flow
+import java.util.TimerTask
 
 //XD: At compile time, Room automatically generates implementations of the custom DAO interface that you define.
 // Click the middle mouse button (Windows users) to see the code generated automatically by the system.
@@ -39,6 +40,9 @@ interface UserDatabaseDao {
     @Query("SELECT * FROM ticket_table")
     fun getAllFlowTickets(): Flow<List<Ticket>>
 
+    @Query("SELECT * FROM ticket_table WHERE ticket_status_column != 1")
+    fun getAllAvailableTicket(): Flow<List<Ticket>>
+
     @Query("SELECT * FROM ticket_table WHERE ticket_id = :key")
     suspend fun getTicketById(key: Long): Ticket
 
@@ -48,6 +52,8 @@ interface UserDatabaseDao {
     @Query("DELETE FROM ticket_table WHERE ticket_id = :key") //":" indicates that it is a Bind variable
     suspend fun deleteTicket(key: Long)
 
+    @Query("UPDATE ticket_table SET ticket_status_column = 1, buyerId = :current_id WHERE ticket_id = :key")
+    suspend fun purchaseNewTicket(key: Long, current_id: Long)
 
     // for the sign in section
 

@@ -17,6 +17,14 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
         repository.insertTicket(ticket)
     }
 
+    fun deleteTicketById(id: Long){
+        repository.deleteTicketById(id)
+    }
+
+    fun purchaseNewTicket(ticket_id: Long, user_id: Long){
+        repository.purchaseNewTicket(ticket_id, user_id)
+    }
+
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
 //        return repository.getUserIdByUserInputNameOrEmail(nameEmail)
 //    }
