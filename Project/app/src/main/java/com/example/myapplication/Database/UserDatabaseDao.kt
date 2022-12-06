@@ -22,7 +22,7 @@ interface UserDatabaseDao {
     // get one user by id and all associated tickets
     @Transaction
     @Query("SELECT * FROM user_table WHERE user_id = :userId")
-    suspend fun getUserWithTickets(userId : Long): List<UserWithTickets>
+    fun getUserWithTickets(userId : Long): List<UserWithTickets>
 
     @Query("SELECT * FROM user_table")
     suspend fun getAllUsers(): List<User>

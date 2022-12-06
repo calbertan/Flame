@@ -137,17 +137,17 @@
 				android:layout_marginTop="526dp"
 				android:contentDescription="expected_price_icon"
 				android:src="@drawable/expected_price_icon" />
-
+			
 			<TextView
-				android:id="@+id/special_notice_title"
-				android:layout_width="217dp"
-				android:layout_height="54dp"
-				android:layout_marginLeft="13dp"
-				android:layout_marginTop="342dp"
-				android:text="@string/location_title_string"
-				android:textColor="@color/delivery_method_title_color"
-				android:textSize="20sp"
-				android:textStyle="bold" />
+					android:id="@+id/special_notice_title"
+					android:layout_width="217dp"
+					android:layout_height="54dp"
+					android:layout_marginLeft="13dp"
+					android:layout_marginTop="342dp"
+					android:text="@string/location_title_string"
+					android:textColor="@color/delivery_method_title_color"
+					android:textSize="20sp"
+					android:textStyle="bold"/>
 
 <!--			<View-->
 <!--				android:id="@+id/special_notice_textbox"-->
@@ -261,18 +261,18 @@
 				android:layout_marginStart="54dp"
 				android:layout_marginTop="715dp"
 				android:background="@drawable/rectangle17_shape" />
-
+			
 			<TextView
-				android:id="@+id/Ready"
-				android:layout_width="240dp"
-				android:layout_height="35.5dp"
-				android:layout_gravity="center_horizontal|center"
-				android:layout_marginLeft="62dp"
-				android:layout_marginTop="710dp"
-				android:gravity="center"
-				android:text="@string/Ready"
-				android:textColor="@color/_bg__Publish_page_color"
-				android:textSize="15sp" />
+					android:id="@+id/Ready"
+					android:layout_width="240dp"
+					android:layout_height="35.5dp"
+					android:layout_gravity="center_horizontal|center"
+					android:layout_marginLeft="62dp"
+					android:layout_marginTop="710dp"
+					android:gravity="center"
+					android:text="@string/Ready"
+					android:textColor="@color/_bg__Publish_page_color"
+					android:textSize="15sp"/>
 
 		</RelativeLayout>
 

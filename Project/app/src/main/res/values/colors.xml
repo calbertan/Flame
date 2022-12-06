@@ -41,4 +41,6 @@
     <color name="delivery_method_description_color">#959595</color>
     <color name="photo_background_color">#EFEFEF</color>
     <color name="Rectangle17_color">#493030</color>
+    <color name="ticketsInfo">#FFFFFF</color>
+
 </resources>

@@ -116,7 +116,7 @@ class Add: Fragment() {
                       description = description,
                       delivery = delivery,
                       status = 0,
-                      userId = 0L,
+                      userId = currentid,
                       buyerId = -1L,
                       sellerId = currentid,
                       ticketPhoto = compressImage(uploadImage.drawable.toBitmap())!!
@@ -125,6 +125,8 @@ class Add: Fragment() {
                 }
 
             }
+
+
         }
 
         return view

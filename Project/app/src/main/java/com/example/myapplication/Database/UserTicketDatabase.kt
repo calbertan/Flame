@@ -13,7 +13,7 @@ import com.example.myapplication.Database.Entities.User
     entities = [
         User::class,
         Ticket::class],
-    version = 2
+    version = 3
 )
 @TypeConverters(Converters::class)
 abstract class UserDatabase : RoomDatabase() {

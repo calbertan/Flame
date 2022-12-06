@@ -11,16 +11,16 @@
         android:layout_marginStart="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
+    
         <ImageView
-            android:id="@+id/rectangle_14"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:contentDescription="rectangle_14"
-            android:src="@drawable/rectangle_14"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-1dp"
-            android:layout_width="334dp"
-            android:layout_height="108dp" />
+                android:id="@+id/rectangle_14"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:contentDescription="rectangle_14"
+                android:src="@drawable/rectangle_14"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-1dp"
+                android:layout_width="334dp"
+                android:layout_height="108dp"/>
 
 
         <RelativeLayout
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members_"
+                android:id="@+id/description"
                 android:layout_width="177dp"
                 android:layout_height="41dp"
                 android:layout_marginStart="50dp"
@@ -43,7 +43,7 @@
                 tools:ignore="SmallSp" />
 
             <TextView
-                android:id="@+id/___89_5"
+                android:id="@+id/ticket_price"
                 android:layout_gravity="center_vertical|end"
                 android:gravity="end"
                 android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
@@ -55,7 +55,7 @@
                 android:text="@string/___89_5_string" />
 
             <TextView
-                android:id="@+id/time_left_before_event_begin__1_months_09_days"
+                android:id="@+id/ticket_date"
                 android:layout_gravity="center_vertical|end"
                 android:gravity="end"
                 android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"
@@ -67,7 +67,7 @@
                 android:text="@string/time_left_before_event_begin__1_months_09_days_string" />
 
             <TextView
-                android:id="@+id/bob_461"
+                android:id="@+id/person_name"
                 android:layout_gravity="center_horizontal|center"
                 android:gravity="center"
                 android:textColor="@color/larana_foods_festival_familiy_tickets__perfect_for_4_familiy_members__color"

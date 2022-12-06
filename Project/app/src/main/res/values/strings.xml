@@ -35,7 +35,9 @@
     <string name="confirmPassword">Comfirm Password</string>
     <string name="nameEmail">User Name or Email</string>
     <string name="welcome">Welcome Back!</string>
-
+    
+    <string name="OrderNow">Order Now</string>
+    
     <string name="Flame_string">Flame</string>
     <string name="Published_string">Published</string>
     <string name="Purchased_string">Purchased</string>
