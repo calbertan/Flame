@@ -20,8 +20,10 @@ Christopher Tan - In charge of controller and manages project webpage/github <br
 Wenxiang He - In charge of handling the database <br>
 
 <h3>APK:</h3>
-<a href="./public/Flame.apk">Flame apk</a>
+[install Flame](/public/Flame.apk)
 
+<h3>Threaded-design-diagram</h3>
+![tdd](/public/Threaded-design-diagram.png)
 
 <h3>Persentation:</h3>
 https://docs.google.com/presentation/d/10XL5guyf8fEefWKzvZXw-FuNtdfX7Rj6RXNAHHwG_Q4/edit#slide=id.g17f77be277a_0_7
