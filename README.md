@@ -24,5 +24,5 @@ Wenxiang He - In charge of handling the database <br>
 
 
 <h3>Persentation:</h3>
-<a href="https://youtu.be/9omGixswkIg" download>Presentation Video</a>
+<a href="https://youtu.be/9omGixswkIg" download>Presentation Video</a><br>
 https://docs.google.com/presentation/d/10XL5guyf8fEefWKzvZXw-FuNtdfX7Rj6RXNAHHwG_Q4/edit#slide=id.g17f77be277a_0_7
