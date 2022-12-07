@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -101,7 +102,15 @@ class Add: Fragment(),DatePickerDialog.OnDateSetListener {
                 price = priceField.text.toString().toDouble()
             }
 
+            if (!this::selectedDate.isInitialized){
+                Toast.makeText(context, "please enter a date", Toast.LENGTH_SHORT).show()
+                valid = false
+            }
 
+            if(uploadImage.drawable == null){
+                Toast.makeText(context, "please provide a picture", Toast.LENGTH_SHORT).show()
+                valid = false
+            }
 
             val locationField:EditText = view.findViewById(R.id.location_description)
             val location:String = locationField.text.toString()
@@ -119,8 +128,6 @@ class Add: Fragment(),DatePickerDialog.OnDateSetListener {
             })
             t.start()
             t.join()
-
-
 
             if(valid) {
                 descriptionField.getText().clear()
@@ -149,8 +156,9 @@ class Add: Fragment(),DatePickerDialog.OnDateSetListener {
                       sellerId = currentid,
                       ticketPhoto = compressImage(uploadImage.drawable.toBitmap())!!
                   )
+                    uploadImage.setImageResource(0)
                     Toast.makeText(context, "Ticket successfully added", Toast.LENGTH_SHORT).show()
-                  viewModel.insertTicket(ticket)
+                    viewModel.insertTicket(ticket)
                 }
 
             }
@@ -187,26 +195,13 @@ class Add: Fragment(),DatePickerDialog.OnDateSetListener {
         }
     }
 
-//    fun resizePhoto(bitmap: Bitmap): Bitmap {
-//        val w = bitmap.width
-//        val h = bitmap.height
-//        val aspRat = w / h
-//        val H = 110
-//        val W = H * aspRat
-//        val b = Bitmap.createScaledBitmap(bitmap, W, H, false)
-//
-//        return b
-//
-//    }
 private fun compressImage(image: Bitmap): Bitmap? {
     val baos = ByteArrayOutputStream()
     image.compress(Bitmap.CompressFormat.JPEG, 100, baos)
     var options = 90
     val length = baos.toByteArray().size / 1024
     if (length > 5000) {
-        //重置baos即清空baos
         baos.reset()
-        //质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
         image.compress(Bitmap.CompressFormat.JPEG, 10, baos)
     } else if (length > 4000) {
         baos.reset()
@@ -218,18 +213,12 @@ private fun compressImage(image: Bitmap): Bitmap? {
         baos.reset()
         image.compress(Bitmap.CompressFormat.JPEG, 70, baos)
     }
-    //循环判断如果压缩后图片是否大于1M,大于继续压缩
     while (baos.toByteArray().size / 1024 > 1024) {
-        //重置baos即清空baos
         baos.reset()
-        //这里压缩options%，把压缩后的数据存放到baos中
         image.compress(Bitmap.CompressFormat.JPEG, options, baos)
-        //每次都减少10
         options -= 10
     }
-    //把压缩后的数据baos存放到ByteArrayInputStream中
     val isBm = ByteArrayInputStream(baos.toByteArray())
-    //把ByteArrayInputStream数据生成图片
     return BitmapFactory.decodeStream(isBm, null, null)
 }
 
