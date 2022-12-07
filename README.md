@@ -11,7 +11,7 @@ A more focused target market means that we are able to implement features that c
 <br>
 Figma Link:
 https://www.figma.com/proto/w3tyHzWqWNspQBXhGqJt0i/CMPT-362-Final-project?node-id=2%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A3
-![home](/public/all-page.png)
+<img src="/public/all-page.png" alt="allpage"/>
 
 <br>
 <h3>Team members:</h3>
@@ -26,7 +26,7 @@ you can also find our app apk in /public/Flame.apk
 
 <br>
 <h3>Threaded-design-diagram</h3>
-![tdd](/public/Threaded-design-diagram.png)
+<img src="/public/Threaded-design-diagram.png" alt="ttd">
 
 <br>
 <h3>Persentation:</h3>
