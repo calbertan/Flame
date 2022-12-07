@@ -24,4 +24,15 @@
         <item name="colorAccent">@color/Rectangle_3_color</item>
         <item name="backgroundTint">@color/Rectangle_3_color</item>
     </style>
+    
+    <style name="YesButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="colorAccent">@color/yes_green</item>
+        <item name="backgroundTint">@color/yes_green</item>
+    </style>
+    
+    <style name="NoButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="colorAccent">@color/no_red</item>
+        <item name="backgroundTint">@color/no_red</item>
+    </style>
+    
 </resources>

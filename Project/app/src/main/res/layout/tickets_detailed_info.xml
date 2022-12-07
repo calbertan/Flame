@@ -1,12 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
+    android:background="@drawable/transparent"
 	android:layout_height="wrap_content"
-	android:background="@color/gray">
+	>
 <!--	<ScrollView android:id="@+id/tickets_detailed_info"-->
 <!--		android:layout_width="match_parent"-->
 <!--		android:layout_height="match_parent" >-->
 	
 	<RelativeLayout android:id="@+id/content_container"
+	                android:background="@drawable/corner"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content">
 		
@@ -20,8 +22,10 @@
 		
 		<ImageView
 				android:id="@+id/individualTicketsInfo"
+				android:background="@drawable/corner"
 				android:contentDescription="Rectangle 13"
 				android:layout_width="match_parent"
+				android:scaleType="fitXY"
 				android:layout_height="135dp"/>
 		
 		
@@ -58,16 +62,17 @@
 				android:layout_gravity="center_vertical|end"
 				android:gravity="end"
 				android:textColor="@color/ticketsInfo"
-				android:layout_marginLeft="285dp"
-				android:layout_marginTop="258dp"
-				android:layout_width="149dp"
+				android:textSize="11sp"
+				android:layout_marginLeft="230dp"
+				android:layout_marginTop="240dp"
+				android:layout_width="170dp"
 				android:layout_height="27dp"
 		/>
 		
 		<TextView
 				android:id="@+id/ticket_detail_price"
-				android:layout_width="33dp"
-				android:layout_height="14dp"
+				android:layout_width="80dp"
+				android:layout_height="20dp"
 				android:layout_gravity="center_vertical|end"
 				android:layout_marginStart="101dp"
 				android:layout_marginTop="163dp"
@@ -77,7 +82,7 @@
 		<TextView
 				android:id="@+id/PriceAttribute"
 				android:layout_width="78dp"
-				android:layout_height="14dp"
+				android:layout_height="20dp"
 				android:layout_marginLeft="16dp"
 				android:text="Price: "
 				android:layout_marginTop="162dp"
@@ -94,8 +99,8 @@
 			
 			<TextView
 					android:id="@+id/descriptionAttribute"
-					android:layout_width="65dp"
-					android:layout_height="14dp"
+					android:layout_width="80dp"
+					android:layout_height="20dp"
 					android:text="Description: "
 					android:layout_marginLeft="0dp"
 					android:layout_marginTop="0dp"
@@ -115,7 +120,7 @@
 			<TextView
 					android:id="@+id/specialNoticeAttribute"
 					android:layout_width="78dp"
-					android:layout_height="14dp"
+					android:layout_height="20dp"
 					android:layout_marginLeft="0dp"
 					android:text="Location: "
 					android:layout_marginTop="0dp"
@@ -133,8 +138,8 @@
 		
 		<TextView
 				android:id="@+id/Location"
-				android:layout_width="138dp"
-				android:layout_height="16dp"
+				android:layout_width="125dp"
+				android:layout_height="20dp"
 				android:layout_marginLeft="101dp"
 				android:layout_marginTop="231dp"
 				android:textColor="@color/ticketsInfo"/>
@@ -155,7 +160,7 @@
 					android:layout_marginTop="0dp"
 					android:layout_width="78dp"
 					android:text="Delivery: "
-					android:layout_height="14dp"/>
+					android:layout_height="20dp"/>
 		
 		</RelativeLayout>
 		
@@ -164,14 +169,14 @@
 				android:textColor="@color/ticketsInfo"
 				android:layout_marginLeft="101dp"
 				android:layout_marginTop="256dp"
-				android:layout_width="138dp"
-				android:layout_height="16dp"/>
+				android:layout_width="125dp"
+				android:layout_height="20dp"/>
 		
 		
 		<RelativeLayout
 				android:id="@+id/OrderNow"
-				android:layout_marginTop="231dp"
-				android:layout_marginStart="295dp"
+				android:layout_marginTop="200dp"
+				android:layout_marginStart="245dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content">
 			
@@ -184,16 +189,19 @@
 			<!--					android:layout_height="16dp" />-->
 
 			<Button
-				android:id="@+id/orderButton"
-				android:layout_width="81dp"
-				android:layout_height="16dp"
-				android:layout_gravity="center_horizontal|center"
-				android:layout_marginStart="6dp"
-				android:background="@drawable/ticketsinfo"
-				android:gravity="center"
-				android:text="@string/OrderNow"
-				android:textColor="@color/ticketsInfo" />
-		
+
+					style="@style/ButtonStyle"
+					android:id="@+id/orderButton"
+					android:layout_width="150dp"
+					android:layout_height="32dp"
+					android:layout_gravity="center_horizontal|center"
+					android:background="@drawable/ticketsinfo"
+					android:gravity="center"
+					android:text="@string/OrderNow"
+					android:textSize="10sp"
+					android:textColor="@color/white"/>
+
+
 		</RelativeLayout>
 	
 	</RelativeLayout>

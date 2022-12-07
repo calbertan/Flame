@@ -11,10 +11,18 @@ import coil.load
 import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.UserDatabase
 import com.example.myapplication.Database.UserDatabaseDao
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MyAdapter(private val context: Context, private var list: List<Ticket>): BaseAdapter() {
     private lateinit var databaseDao: UserDatabaseDao
-
+    val calendar = Calendar.getInstance()
+    private var year = 0
+    private var month = 0
+    private var day = 0
+    private var hours = 0
+    private var mins = 0
+    private var secs = 0
     private lateinit var ticketDescription: TextView
     private lateinit var priceView: TextView
     private lateinit var ExpireDay: TextView
@@ -52,7 +60,16 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
         val img = list[position].ticketPhoto
         print("id is:" + list[position].userId)
 
-        img_field.load(img)
+        setTodayDateTime()
+        val inputFormat = SimpleDateFormat("yyyyMMddHHmmss")
+        val ExpiredDate = inputFormat.parse(date)
+        val todayDate = Date(year,month,day,hours,mins,secs)
+        println("today's date: " + todayDate.year )
+        val diff: Long =  todayDate.time - ExpiredDate.time
+        val no_days = diff / (1000*60*60*24)
+
+        img_field.setImageBitmap(img)
+        img_field.setBackgroundResource(R.drawable.corner)
         val t = Thread(Runnable{
             userName = databaseDao.getUserWithTickets(list[position].userId)[0].user.name
         })
@@ -60,7 +77,7 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
         t.join()
         ticketDescription.text = desc
         priceView.text = "$ " + price.toString()
-        ExpireDay.text = date
+        ExpireDay.text = "$no_days Days before Event Begin"
         name.text = userName
 
         return view
@@ -68,5 +85,11 @@ class MyAdapter(private val context: Context, private var list: List<Ticket>): B
 
     fun replaceList(newList:List<Ticket>){
         list = newList
+    }
+
+    fun setTodayDateTime() {
+        year = calendar.get(Calendar.YEAR) - 1900
+        month = calendar.get(Calendar.MONTH) + 1
+        day = calendar.get(Calendar.DATE)
     }
 }

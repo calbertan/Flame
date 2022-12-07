@@ -42,5 +42,12 @@
     <color name="photo_background_color">#EFEFEF</color>
     <color name="Rectangle17_color">#493030</color>
     <color name="ticketsInfo">#FFFFFF</color>
-
+    
+    <color name="ticket_detailed_info_bg">#7C7C7C</color>
+    
+    <color name="transparent">#80FFFFFF</color>
+    <color name="warning">#8F0000</color>
+    
+    <color name="yes_green">#00992B</color>
+    <color name="no_red">#880101</color>
 </resources>

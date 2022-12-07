@@ -58,17 +58,17 @@
 				android:layout_marginTop="670dp"
 				android:contentDescription="delivery_method_icon"
 				android:src="@drawable/delivery_method_icon" />
-
+			
 			<TextView
-				android:id="@+id/expired_date_title"
-				android:layout_width="217dp"
-				android:layout_height="54dp"
-				android:layout_marginLeft="13dp"
-				android:layout_marginTop="551dp"
-				android:text="@string/expired_date_title_string"
-				android:textColor="@color/delivery_method_title_color"
-				android:textSize="20sp"
-				android:textStyle="bold" />
+					android:id="@+id/expired_date_title"
+					android:layout_width="217dp"
+					android:layout_height="30dp"
+					android:layout_marginLeft="13dp"
+					android:layout_marginTop="551dp"
+					android:text="@string/expired_date_title_string"
+					android:textColor="@color/delivery_method_title_color"
+					android:textSize="20sp"
+					android:textStyle="bold"/>
 
 			<!--			<View-->
 			<!--				android:id="@+id/expired_date_textbox"-->
@@ -76,18 +76,18 @@
 			<!--				android:layout_height="34dp"-->
 			<!--				android:layout_marginTop="591dp"-->
 			<!--				android:background="@drawable/expired_date_textbox_shape" />-->
-
-			<EditText
-				android:id="@+id/expired_date_description"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center_horizontal|center"
-				android:layout_marginLeft="12dp"
-				android:layout_marginTop="582dp"
-				android:hint="@string/expired_date_description_string"
-				android:text=""
-				android:textColor="@color/delivery_method_description_color"
-				android:textSize="20sp" />
+			
+			<TextView
+					android:clickable="true"
+					android:id="@+id/expired_date_description"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal|center"
+					android:layout_marginLeft="12dp"
+					android:layout_marginTop="582dp"
+					android:text="@string/expired_date_description_string"
+					android:textColor="@color/delivery_method_description_color"
+					android:textSize="20sp"/>
 
 			<ImageView
 				android:id="@+id/expired_date_icon"
@@ -115,19 +115,19 @@
 			<!--				android:layout_height="34dp"-->
 			<!--				android:layout_marginTop="519dp"-->
 			<!--				android:background="@drawable/expected_price_textbox_shape" />-->
-
+			
 			<EditText
-				android:id="@+id/expected_price_description"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center_horizontal|center"
-				android:layout_marginStart="12dp"
-				android:layout_marginTop="510dp"
-				android:hint="@string/expected_price_description_string"
-				android:inputType="number|numberDecimal"
-				android:text=""
-				android:textColor="@color/delivery_method_description_color"
-				android:textSize="20sp" />
+					android:id="@+id/expected_price_description"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal|center"
+					android:layout_marginStart="12dp"
+					android:layout_marginTop="510dp"
+					android:hint="@string/expected_price_description_string"
+					android:inputType="number|numberDecimal"
+					android:text=""
+					android:textColor="@color/delivery_method_description_color"
+					android:textSize="20sp"/>
 
 			<ImageView
 				android:id="@+id/expected_price_icon"
@@ -214,15 +214,15 @@
 				android:textColor="@color/delivery_method_title_color"
 				android:textSize="20sp"
 				android:textStyle="bold" />
-
+			
 			<ImageView
-				android:id="@+id/photo_background"
-				android:layout_width="match_parent"
-				android:layout_height="110dp"
-				android:layout_marginTop="98dp"
-				android:adjustViewBounds="true"
-				android:background="@drawable/photo_background_shape"
-				android:scaleType="fitXY" />
+					android:id="@+id/photo_background"
+					android:layout_width="match_parent"
+					android:layout_height="110dp"
+					android:layout_marginTop="98dp"
+					android:adjustViewBounds="true"
+					android:background="@drawable/photo_background_shape"
+					android:scaleType="fitXY"/>
 
 			<TextView
 				android:id="@+id/add_photo"

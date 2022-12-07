@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Flame</string>
     <string name="username">Your username</string>
     <string name="sign">Sign In</string>
     <string name="password">Your password</string>

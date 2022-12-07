@@ -17,6 +17,12 @@ class UserRepository(private val databaseDao: UserDatabaseDao) {
         }
     }
 
+    fun deleteTicketById(id: Long){
+        CoroutineScope(IO).launch{
+            databaseDao.deleteTicket(id)
+        }
+    }
+
     fun insertTicket(ticket: Ticket){
         CoroutineScope(IO).launch{
             databaseDao.insertTicket(ticket)

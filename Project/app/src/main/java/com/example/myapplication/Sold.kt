@@ -1,15 +1,18 @@
 package com.example.myapplication
 
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import coil.load
 import com.example.myapplication.Database.*
 import com.example.myapplication.Database.Entities.Ticket
 
@@ -62,13 +65,39 @@ class Sold: Fragment() {
             myAdapter.notifyDataSetChanged()
         }
 
-
-
-
+        listView.setOnItemClickListener { _, _, position, _ ->
+            val selectedTicket = myAdapter.getItem(position) as Ticket
+            showDialog(selectedTicket)
+        }
 
         return view
     }
 
+    private fun showDialog(ticket: Ticket){
+        val dialog = context?.let { Dialog(it) }
+        if (dialog != null) {
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.setCancelable(true)
+            dialog.setContentView(R.layout.warning)
 
+            val button_yes = dialog.findViewById<Button>(R.id.YesButton)
+            val button_no = dialog.findViewById<Button>(R.id.NoButton)
+            button_no.setOnClickListener {
+                dialog.cancel()
+            }
+            button_yes.setOnClickListener {
+                viewModel.deleteTicketById(ticket.ticket_id)
+                dialog.cancel()
+            }
+            var lp = dialog.window?.attributes
+            if (lp != null) {
+                lp.width = (resources.displayMetrics.widthPixels * 0.95).toInt()
+            }
+            lp?.height = WindowManager.LayoutParams.WRAP_CONTENT
+            dialog.window?.attributes = lp
+            dialog.show()
+        }
+
+    }
 
 }

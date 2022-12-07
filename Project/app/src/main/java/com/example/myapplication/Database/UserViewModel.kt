@@ -20,6 +20,10 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
         repository.insertTicket(ticket)
     }
 
+    fun deleteTicketById(id: Long){
+        repository.deleteTicketById(id)
+    }
+
     fun updateTicketStatus(tid: Long, status: Int){
         repository.updateTicketStatus(tid, status)
     }
@@ -33,6 +37,7 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
     }
     fun balanceFromId(id: Long): Double{
         return repository.balanceFromId(id)
+
     }
 
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {
