@@ -19,8 +19,8 @@ Borui Li - Implementataion of Mock UI, helps Bowei Pan with UI implementation on
 Christopher Tan - In charge of controller and manages project webpage/github <br>
 Wenxiang He - In charge of handling the database <br>
 
-<h3>APK:</h3>
-<a href="./public/Flame.apk">Flame apk</a>
+<h3>APK:</h3> 
+<a href="./public/Flame.apk">Flame apk</a> == $0
 
 
 <h3>Persentation:</h3>
