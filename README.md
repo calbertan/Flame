@@ -14,10 +14,10 @@ https://www.figma.com/proto/w3tyHzWqWNspQBXhGqJt0i/CMPT-362-Final-project?node-i
 
 
 <h3>Team members:</h3>
-Borui Li - Implementation of main UI
-Bowei Pan - Implementataion of Mock UI, helps with UI implementation on fragments
-Christopher Tan - In charge of controller and manages project webpage/github
-Wenxiang He - In charge of handling the database
+Bowei Pan - Implementation of main UI <br>
+Borui Li - Implementataion of Mock UI, helps Bowei Pan with UI implementation on fragments <br>
+Christopher Tan - In charge of controller and manages project webpage/github <br>
+Wenxiang He - In charge of handling the database <br>
 
 <h3>APK:</h3>
 
