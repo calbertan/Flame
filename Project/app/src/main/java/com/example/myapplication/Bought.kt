@@ -30,15 +30,8 @@ class Bought: Fragment() {
         var currentid:Long = 0L
         val sharedPreferences = this.activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val currentUser:String? = sharedPreferences?.getString("USER_KEY",null)
-        println("debug: $currentUser ")
-        databaseDao = UserDatabase.getInstance(requireContext()).userDatabaseDao
 
-        val t = Thread(Runnable{
-            currentid = databaseDao.usernameExists(currentUser!!)!!
-        })
-        t.start()
-        t.join()
-        listView = view.findViewById(R.id.ticket_list_bought)
+        listView = view.findViewById(R.id.ticket_list)
         arrayList = ArrayList()
         myAdapter = MyAdapter(requireActivity(),arrayList)
         listView.adapter = myAdapter
@@ -49,11 +42,16 @@ class Bought: Fragment() {
         factory = UserViewModelFactory(repository)
         viewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
 
+        val t = Thread(Runnable{
+            currentid = databaseDao.usernameExists(currentUser!!)!!
+        })
+        t.start()
+        t.join()
+
         viewModel.allLiveData.observe(requireActivity()){
             //update listView
             myTickets.clear()
-            println(currentid)
-            for (i in 0..(it.size - 1)) {
+            for (i in 0..(it.size-1)) {
                 println("debug $it.")
                 if (it[i].buyerId == currentid)
                     myTickets.add(it[i])

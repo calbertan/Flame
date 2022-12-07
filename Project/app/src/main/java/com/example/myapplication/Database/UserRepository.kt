@@ -1,5 +1,6 @@
 package com.example.myapplication.Database
 
+import androidx.room.Query
 import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.Entities.User
 import kotlinx.coroutines.CoroutineScope
@@ -27,12 +28,29 @@ class UserRepository(private val databaseDao: UserDatabaseDao) {
             databaseDao.insertTicket(ticket)
         }
     }
-
-    fun purchaseNewTicket(ticket_id: Long, user_id: Long){
-        CoroutineScope(IO).launch {
-            println("aaaaa")
-            databaseDao.purchaseNewTicket(ticket_id, user_id)
+    fun updateTicketStatus(tid: Long, status: Int){
+        CoroutineScope(IO).launch{
+            databaseDao.updateTicketStatus(tid, status)
         }
+    }
+    fun updateTicketBuyer(tid: Long, bid: Long){
+        CoroutineScope(IO).launch{
+            databaseDao.updateTicketBuyer(tid, bid)
+        }
+    }
+    fun updateBalance(id: Long, newBalance: Double){
+        CoroutineScope(IO).launch {
+            databaseDao.updateBalance(id, newBalance)
+        }
+    }
+
+    fun balanceFromId(id: Long): Double{
+        var balance = 0.0
+        CoroutineScope(IO).launch {
+            if (databaseDao.balanceFromId(id) != null)
+                balance = databaseDao.balanceFromId(id)!!
+        }
+        return balance
     }
 
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {

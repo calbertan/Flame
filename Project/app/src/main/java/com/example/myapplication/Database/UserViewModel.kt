@@ -5,6 +5,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import com.example.myapplication.Database.Entities.Ticket
 import com.example.myapplication.Database.Entities.User
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
 class UserViewModel(private val repository: UserRepository) :ViewModel(){
@@ -21,8 +24,20 @@ class UserViewModel(private val repository: UserRepository) :ViewModel(){
         repository.deleteTicketById(id)
     }
 
-    fun purchaseNewTicket(ticket_id: Long, user_id: Long){
-        repository.purchaseNewTicket(ticket_id, user_id)
+    fun updateTicketStatus(tid: Long, status: Int){
+        repository.updateTicketStatus(tid, status)
+    }
+
+    fun updateTicketBuyer(tid: Long, bid: Long){
+        repository.updateTicketBuyer(tid, bid)
+    }
+
+    fun updateBalance(id: Long, newBalance: Double){
+        repository.updateBalance(id, newBalance)
+    }
+    fun balanceFromId(id: Long): Double{
+        return repository.balanceFromId(id)
+
     }
 
 //    suspend fun getUserIdByUserInputNameOrEmail(nameEmail: String) : Long {

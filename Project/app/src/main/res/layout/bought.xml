@@ -31,12 +31,10 @@
         />
 
     </RelativeLayout>
-    
     <ListView
-            android:id="@+id/ticket_list_bought"
-            android:layout_marginTop="125dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-    
+        android:id="@+id/ticket_list"
+        android:layout_marginTop="125dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     </ListView>
 </RelativeLayout>

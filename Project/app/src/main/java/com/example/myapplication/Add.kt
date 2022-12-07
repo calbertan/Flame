@@ -149,6 +149,7 @@ class Add: Fragment(),DatePickerDialog.OnDateSetListener {
                       sellerId = currentid,
                       ticketPhoto = compressImage(uploadImage.drawable.toBitmap())!!
                   )
+                    Toast.makeText(context, "Ticket successfully added", Toast.LENGTH_SHORT).show()
                   viewModel.insertTicket(ticket)
                 }
 
