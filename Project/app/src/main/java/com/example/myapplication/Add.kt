@@ -200,16 +200,16 @@ private fun compressImage(image: Bitmap): Bitmap? {
     image.compress(Bitmap.CompressFormat.JPEG, 100, baos)
     var options = 90
     val length = baos.toByteArray().size / 1024
-    if (length > 5000) {
+    if (length > 1000) {
         baos.reset()
         image.compress(Bitmap.CompressFormat.JPEG, 10, baos)
-    } else if (length > 4000) {
+    } else if (length > 800) {
         baos.reset()
         image.compress(Bitmap.CompressFormat.JPEG, 20, baos)
-    } else if (length > 3000) {
+    } else if (length > 600) {
         baos.reset()
         image.compress(Bitmap.CompressFormat.JPEG, 50, baos)
-    } else if (length > 2000) {
+    } else if (length > 400) {
         baos.reset()
         image.compress(Bitmap.CompressFormat.JPEG, 70, baos)
     }
