@@ -8,7 +8,7 @@ easily sell that ticket that they quickly need to get rid of.
 <br>
 A more focused target market means that we are able to implement features that cater more towards our audience. Current shopping apps like ebay are very broad and allows everyone to sell anything they want, which can be overwhelming and make it harder to find that specific thing you want.
 
-<br>
+<br><br>
 Figma Link:
 https://www.figma.com/proto/w3tyHzWqWNspQBXhGqJt0i/CMPT-362-Final-project?node-id=2%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A3
 <img src="/public/all-page.png" alt="allpage"/>
